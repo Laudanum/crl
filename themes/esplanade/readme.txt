@@ -8,7 +8,7 @@ editor-style, featured-images, full-width-template, microformats,
 post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 
 Description: A stylish, modern and flexible theme with responsive layout. Includes several custom templates, layouts and color schemes to choose from, 5 widget-ready areas and a user friendly options page to keep everything in control.
 
@@ -190,11 +190,15 @@ The theme is offered free of charge. If someone asked money for it, someone just
 
 == Changelog ==
 
-= 1.0.4 =
+= 1.0.7 =
+
+* Fixed embedded media not displaying in slider
+
+= 1.0.6 =
 * Reduced dimensions of No Sidebars template to content width
 * Embeds are now made responsive with fitvids.js
 
-= 1.0.4 =
+= 1.0.5 =
 * Added flash player fallback for video post formats
 * Silenced HTML5 warnings thrown by DOMDocument objects
 * Fixed padding on static front pages

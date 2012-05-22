@@ -7,13 +7,6 @@
 				<?php while( $slider->have_posts() ) : $slider->the_post(); ?>
 					<li>
 						<article <?php post_class(); ?>>
-							<?php if( has_post_format( 'video' ) ) : ?>
-								<?php esplanade_post_video(); ?>
-							<?php elseif( has_post_thumbnail() ) : ?>
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-									<?php the_post_thumbnail( 'slider-thumb' ); ?>
-								</a>
-							<?php endif; ?>
 							<div class="entry-container">
 								<header class="entry-header">
 									<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -31,6 +24,14 @@
 								</div><!-- .entry-summary -->
 								<div class="clear"></div>
 							</div><!-- .entry-container -->
+							<?php if( has_post_format( 'video' ) ) : ?>
+								<?php esplanade_post_video(); ?>
+							<?php elseif( has_post_thumbnail() ) : ?>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+									<?php the_post_thumbnail( 'slider-thumb' ); ?>
+								</a>
+							<?php endif; ?>
+							<div class="clear"></div>
 						</article><!-- .post -->
 					</li>
 				<?php endwhile; ?>

@@ -29,7 +29,6 @@
 								<p><?php esplanade_post_video(); ?></p>
 							<?php endif; ?>
 							<?php the_content(); ?>
-							<p><?php the_field('name'); ?></p>
 							<div class="clear"></div>
 						</div><!-- .entry-content -->
 						<footer class="entry-utility">

@@ -1477,8 +1477,6 @@ endif;
 
 add_filter( 'wp_get_attachment_link', 'esplanade_rel_attachment' );
 
-
-
 if ( ! function_exists( 'esplanade_get_first_image' ) ) :
 /**
  * Show the first image inserted in the current postimage
@@ -1615,9 +1613,7 @@ function esplanade_post_gallery() {
 			<?php endforeach; ?>
 			<div class="clear"></div>
 		</div><!-- .gallery -->
-		<p>
-		<?php echo sprintf( __( 'This is a gallery about %1$s and contains %2$d images.', 'esplanade' ), $link, $count ); ?>
-		</p>
+		<p><?php echo sprintf( __( 'This is a gallery about %1$s and contains %2$d images.', 'esplanade' ), $link, $count ); ?></p>
 	<?php endif;
 }
 endif;
@@ -2106,97 +2102,3 @@ endif;
 
 add_action( 'personal_options_update', 'esplanade_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'esplanade_save_extra_profile_fields' );
-
-/**
- * Activate Add-ons
- * Here you can enter your activation codes to unlock Add-ons to use in your theme. 
- * Since all activation codes are multi-site licenses, you are allowed to include your key in premium themes. 
- * Use the commented out code to update the database with your activation code. 
- * You may place this code inside an IF statement that only runs on theme activation.
- */ 
-// if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', "xxxx-xxxx-xxxx-xxxx");
-// if(!get_option('acf_options_ac')) update_option('acf_options_ac', "xxxx-xxxx-xxxx-xxxx");
-// if(!get_option('acf_flexible_content_ac')) update_option('acf_flexible_content_ac', "xxxx-xxxx-xxxx-xxxx");
-
-
-/**
- * Register field groups
- * The register_field_group function accepts 1 array which holds the relevant data to register a field group
- * You may edit the array as you see fit. However, this may result in errors if the array is not compatible with ACF
- * This code must run every time the functions.php file is read
- */
-if(function_exists("register_field_group"))
-{
-register_field_group(array (
-  'id' => '4fbab1b02acbe',
-  'title' => 'Projects',
-  'fields' => 
-  array (
-    0 => 
-    array (
-      'key' => 'field_4fb6c6309f796',
-      'label' => 'Name',
-      'name' => 'projects_name',
-      'type' => 'text',
-      'instructions' => '',
-      'required' => '1',
-      'default_value' => '',
-      'formatting' => 'html',
-      'order_no' => '0',
-    ),
-    1 => 
-    array (
-      'key' => 'field_4fb6c6309fcaa',
-      'label' => 'Overview',
-      'name' => 'projects_overview',
-      'type' => 'textarea',
-      'instructions' => '',
-      'required' => '1',
-      'default_value' => '',
-      'formatting' => 'br',
-      'order_no' => '1',
-    ),
-    2 => 
-    array (
-      'key' => 'field_4fb6cdc36c8f2',
-      'label' => 'Image',
-      'name' => 'projects_image',
-      'type' => 'image',
-      'instructions' => '',
-      'required' => '1',
-      'save_format' => 'url',
-      'preview_size' => 'thumbnail',
-      'order_no' => '2',
-    ),
-  ),
-  'location' => 
-  array (
-    'rules' => 
-    array (
-      0 => 
-      array (
-        'param' => 'page_template',
-        'operator' => '==',
-        'value' => 'page_project.php',
-        'order_no' => '0',
-      ),
-    ),
-    'allorany' => 'all',
-  ),
-  'options' => 
-  array (
-    'position' => 'normal',
-    'layout' => 'default',
-    'show_on_page' => 
-    array (
-      0 => 'the_content',
-      1 => 'custom_fields',
-      2 => 'discussion',
-      3 => 'comments',
-      4 => 'slug',
-      5 => 'author',
-    ),
-  ),
-  'menu_order' => 0,
-));
-}
