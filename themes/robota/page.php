@@ -17,12 +17,6 @@
 						</header><!-- .entry-header -->
 						<div class="entry-content">
 							<?php the_content(); ?>
-							<p><?php the_field('name'); ?></p>
-              <ul>
-              <?php foreach(get_field('people_projects') as $post_object): ?>
-                <li><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a></li>
-              <?php endforeach; ?></ul>
-							<p><?php the_field('position'); ?></p>
 							<div class="clear"></div>
 						</div><!-- .entry-content -->
 						<?php wp_link_pages( array( 'before' => '<footer class="entry-utility"><p class="post-pagination">' . __( 'Pages:', 'esplanade' ), 'after' => '</p></footer><!-- .entry-utility -->' ) ); ?>
