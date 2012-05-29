@@ -19,8 +19,14 @@ function parent_title_the_title($title, $id=null) {
 		return $title;
 	}
 	if ( $id ) {
-		$post = get_post($id);
-		$title = _parent_title_get_title($title, $post, FALSE, array('separator' => '; '));
+//	if we've got an id but its not the current post then ignore.
+		global $post;
+		if ( $id != $post->ID ) {
+			return $title;
+		}
+
+		$the_post = get_post($id);
+		$title = _parent_title_get_title($title, $the_post, FALSE, array('separator' => '; '));
 	}
 	return $title;
 }
