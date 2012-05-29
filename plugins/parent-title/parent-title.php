@@ -1,11 +1,12 @@
 <?php
 /*
 Plugin Name: Parent Title
-Plugin URI: http://jameslao.com/2011/03/24/category-posts-widget-3-2/
-Description: Adds a widget that can display posts from a single category.
-Author: James Lao	
-Version: 3.3
-Author URI: http://jameslao.com/
+Plugin URI: http://houseoflaudanum.com/wordpress/
+Description: Add parent page titles to page titles where they exist.
+Version: 0.1
+Author: Laudanum
+Author URI: http://houseoflaudanum.com/identities/mr-snow/
+License: GPL2
 */
 
 
@@ -30,6 +31,7 @@ function parent_title_the_title($title, $id=null) {
 	}
 	return $title;
 }
+
 
 function _parent_title_get_title($title, $post=null, $is_header, $args=array()) {
 //	no post provided so use global post
