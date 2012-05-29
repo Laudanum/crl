@@ -14,6 +14,10 @@ Author URI: http://jameslao.com/
 //	wp_title 
 
 function parent_title_the_title($title, $id=null) {
+//	don't touch the title if we're not in the loop (eg: list pages or menus)
+	if ( ! in_the_loop() ) {
+		return $title;
+	}
 	if ( $id ) {
 		$post = get_post($id);
 		$title = _parent_title_get_title($title, $post, FALSE, array('separator' => '; '));
