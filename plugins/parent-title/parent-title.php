@@ -14,12 +14,19 @@ Author URI: http://jameslao.com/
 //	wp_title 
 
 function parent_title_the_title($title, $id=null) {
-	$title = _parent_title_get_title($title, FALSE, array('separator' => '; '));
+	if ( $id ) {
+		$post = get_post($id);
+		$title = _parent_title_get_title($title, $post, FALSE, array('separator' => '; '));
+	}
 	return $title;
 }
 
-function _parent_title_get_title($title, $is_header, $args=array()) {
-	global $post;
+function _parent_title_get_title($title, $post=null, $is_header, $args=array()) {
+//	no post provided so use global post
+	if ( ! $post )
+		global $post;
+
+//	no parent so return
 	if ( intval($post->post_parent) < 1 ) {
 		return $title;
 	}
@@ -48,14 +55,16 @@ function _parent_title_get_title($title, $is_header, $args=array()) {
 }
 
 
-function parent_title_wp_title($title, $sep="»", $seplocation="") {
+function parent_title_wp_title($title, $sep="&raquo;", $seplocation="") {
+	if ( ! trim($sep) )
+		$sep = "&raquo;";
 	$args = array('separator' => $sep);
-	$title = _parent_title_get_title($title, TRUE, $args);
+	$title = _parent_title_get_title($title, null, TRUE, $args);
 	return $title;
 }
 
 
 if ( ! is_admin() ) {
-	add_filter( 'the_title', 'parent_title_the_title');
-	add_filter( 'wp_title', 'parent_title_wp_title');
+	add_filter( 'the_title', 'parent_title_the_title', 10, 2);
+	add_filter( 'wp_title', 'parent_title_wp_title', 10, 3);
 }
