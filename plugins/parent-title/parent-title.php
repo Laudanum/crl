@@ -23,11 +23,20 @@ function _parent_title_get_title($title, $is_header, $args=array()) {
 	if ( intval($post->post_parent) < 1 ) {
 		return $title;
 	}
+//	possibly when using page links to 
+	if ( $post->ID == $post->post_parent ) {
+		return $title;
+	}
 
 	$parent = get_post($post->post_parent);
+	$parent_title = $parent->post_title;
+//	don't duplicate titles
+	if ( $parent_title == $title ) {
+		return $title;
+	}
+
 	$tag = $is_header ? 'wp_title' : 'the_title';
 //	$parent_title = apply_filters($tag, $parent->post_title);
-	$parent_title = $parent->post_title;
 
 	if ( $is_header ) {
 		$title .= " " . $args['separator'] . " " . $parent_title;
