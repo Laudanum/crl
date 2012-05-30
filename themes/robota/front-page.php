@@ -9,8 +9,7 @@
 		<?php endif; ?>
 		<section id="content">
 			
-			<?php if ( dynamic_sidebar('front-page') ) : ?>
-				<?php dynamic_sidebar( 'front-page' ); ?>
+			<?php if ( ! dynamic_sidebar('front-page') ) : ?>
 			<?php endif; ?>
 
 			<?php if( have_posts() ) : ?>
