@@ -1,6 +1,6 @@
 Creative Robotics Lab
 
-h1. WordPress Plugins
+WordPress Plugins
 
 * Category Post Widget... News in right column
 * Image Wiget... Homepage center column top image
