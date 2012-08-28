@@ -19,14 +19,26 @@ Version:        0.1.0
          url('fonts/BEBAS___-webfont.svg#BebasRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
 	background: #f1f2ed;
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 12px;
+	line-height: 21px !important;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
 	font-family: 'BebasRegular', Arial, sans-serif;
+}
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+
+.single .entry-title, .page .entry-title, .error404 .entry-title {
+	font-size: 22px;
 }
 
 #wrapper {
@@ -47,7 +59,7 @@ body {
 }
 
 #header {
-	background: url('images/niea_logo.png') no-repeat 703px 0 transparent;
+	background: url('images/niea_logo.png') no-repeat 725px 0 transparent;
 	margin: 0 auto;
 	width: 960px;
 }
@@ -58,6 +70,8 @@ body {
 	margin: -20px 20px -20px -60px;
 	padding: 40px 10px 10px 70px;
 	z-index: 10;
+	text-indent: -9999px;
+	width: 140px;
 }
 
 #site-title a {
@@ -72,10 +86,27 @@ body {
 	box-shadow: none;
 }
 
+#access a {
+	font-family: 'BebasRegular', Arial, sans-serif;
+}
+
 #access ul {
 	font-size: 16px;
 	max-width: 100%;
-	margin: 55px 0 0 0;
+	margin: 40px 0 0 0;
+	word-spacing: 3px;
+}
+
+#access ul li {
+	border-right: 1px solid #484647;
+	padding: 15px 0 0 0;
+}
+#access ul li:last-child {
+	border-right: none;
+}
+
+#access ul li ul li {
+	padding: 0;
 }
 
 
@@ -119,7 +150,8 @@ body {
 
 #slider .entry-title a {
 	color: #FFF;
-	font-size: 30px;
+	font-size: 24px;
+	font-weight: normal;
 	line-height: 60px;
 	padding: 0 20px;
 }
@@ -127,12 +159,13 @@ body {
 .flex-direction-nav {
 	position: relative;
 	top: -140px;
-	left: 620px;
+	left: 619px;
 	height: 40px;
 	width: 250px;
 	display: inline-block;
 	background: #FFF;
 	padding: 20px 30px;
+	border-right: 1px solid #333;
 }
 
 .flex-direction-nav li {
@@ -142,6 +175,7 @@ body {
 }
 
 .flex-direction-nav li a {
+	font-family: 'BebasRegular', Arial, sans-serif;
 	color: #353334;
 	font-size: 30px;
 	font-weight: 400;
@@ -150,10 +184,10 @@ body {
 	content: '\002B';
 	padding: 0 10px 0 0;
 	font-weight: bold;
-	color: #f45943;
+	color: #43def5;
 }
 .flex-direction-nav li .prev:after {
-	content: '  /';
+	content: ' /';
 }
 
 
@@ -174,28 +208,36 @@ body {
 
 #content {
 	margin: 32px 0;
+	width: 75%
 }
 
-.home #content {
-	margin: 0;
+.home #container #content {
+	margin: 0 0 40px 0;
+	padding: 0;
+	width: 68.3%;
+	box-shadow: none;
+	float: left;
+}
+
+.home #content .post {
+	border-top: none;
+	padding: 0;
 }
 
 #sidebar {
 	margin: 40px 0;
+	width: 23%
+}
+
+.home #sidebar {
+	margin: 0 0 40px 0;
+	float: right;
+	width: 27%
 }
 
 .entry-content p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
-}
-
-.entry-content h2 {
-	font-size: 20px;
-	padding: 2px 5px;
-	margin: 0 0 15px 0;
-	color: #FFF;
-	background: #302e2f;
-	display: inline-block;
 }
 
 .entry-content .wp-caption {
@@ -226,13 +268,17 @@ body {
 	overflow: hidden;
 }
 
+.entry-author .author {
+	font-family: 'Open Sans', sans-serif;
+}
+
 
 /* Portfolio Page */
 
 .entry.portfolio-entry {
-	width: 200px;
+	width: 220px;
 	float: left;
-	height: 150px;
+	height: 148px;
 	overflow: hidden;
 	margin: 0 25px 25px 0;
 	padding: 0;
@@ -243,8 +289,6 @@ body {
 }
 
 .portfolio-entry .entry-header {
-	font-size: 16px;
-	padding: 0 3px;
 	margin: 0;
 	padding: 10px 10px 0 10px;
 	background: #302e2f;
@@ -253,13 +297,14 @@ body {
 }
 
 .portfolio-entry .entry-title {
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: normal;
 	margin: 0;
-	padding: 0 5px;
+	padding: 1px 5px;
 	color: #302e2f;
 	background: #FFF;
 	display: inline-block;
+	word-spacing: 2px;
 }
 
 .portfolio-entry img {
@@ -267,10 +312,31 @@ body {
 	background: none;
 	border: none;
 	padding: 0;
-	width: 200px;
-	max-width: 200px;
-	height: 120px;
+	width: 220px;
+	max-width: 220px;
+	height: 118px;
 }
+
+
+/* Person Page */
+
+.post-meta {
+	list-style: none;
+	font-size: 16px;
+	margin: 0 0 20px 0;
+}
+
+.post-meta-key {
+	font-size: 16px;
+	font-family: 'BebasRegular', Arial, sans-serif;
+	font-weight: normal;
+	word-spacing: 3px;
+	padding: 3px 10px;
+	background: #302e2f;
+	color: #FFF;
+	display: inline-block;
+}
+
 
 
 /* Sidebar and Widgets */
@@ -281,7 +347,7 @@ body {
 
 .page-list .widget-title {
 	padding: 5px 10px;
-	font-size: 18px;
+	font-size: 12px;
 	background: #D2D2D2;
 	color: #302e2f;
 }
@@ -292,12 +358,174 @@ body {
 .page-list ul li {
 	padding: 5px 15px;
 	border-bottom: 1px solid #D2D2D2;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .page-list ul li a {
 	color: #302e2f;
 }
+
+.home #featured-post-widget-wrap {
+	margin: 20px;
+}
+
+.home #featured-post-widget-wrap h4 {
+	font-size: 16px;
+	font-family: 'BebasRegular', Arial, sans-serif;
+	font-weight: normal;
+	word-spacing: 3px;
+	padding: 3px 10px;
+	margin: 0 10px 15px 10px;
+	background: #302e2f;
+	color: #FFF;
+	display: inline-block;
+}
+
+.home .featured-post-block {
+	border: 1px solid #DEDEDE;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.home .featured-post-item {
+	float: left;
+	width: 177px;
+	margin: 0 30px 0 0;
+}
+.home .featured-post-item.last {
+	margin: 0;
+}
+
+.home .featured-post-item .wp-post-image {
+	max-width: 100%;
+	padding: 0;
+	background: none;
+	float: none;
+	border-bottom: 3px solid #43def5;
+}
+
+.home .featured-post-item h3 {
+	margin: 0;
+	height: 50px;
+	overflow: hidden;
+	font-weight: normal;
+}
+
+.home .featured-post-item h3 a {
+	color: #E3E4DC;
+}
+.home .featured-post-item h3 a:hover {
+	color: #5d5d5d;
+}
+
+.home .featured-post-item span a {
+	color: #5d5d5d;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.home .post.widget_sp_image {
+	background: #353334;
+	color: #FFF;
+	padding: 0;
+}
+.home .post.widget_sp_image h2 {
+	font-weight: normal;
+	line-height: 24px;
+	font-size: 20px;
+}
+
+.home .post.widget_sp_image img {
+	float: left;
+	width: 65%;
+	margin: 0;
+	padding: 0 0 15px 15px;
+}
+
+.home .post.widget_sp_image .entry-header,
+.home .post.widget_sp_image .widget_sp_image-description {
+	float: right;
+	width: 28%;
+}
+
+.home .post.widget_sp_image .entry-header {
+	margin: 15px;
+}
+
+.home .post.widget_sp_image .widget_sp_image-description {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 15px;
+}
+
+.home .post.widget_sp_image .widget_sp_image-description a {
+	font-size: 16px;
+	font-family: 'BebasRegular', Arial, sans-serif;
+	padding: 2px 5px;
+	color: #302e2f;
+	background: #FFF;
+	display: inline-block;
+	margin: 10px 0 0 0;
+}
+
+.home .above-home-image-widget {
+	background: #353334;
+	border-bottom: 3px solid #FFF;
+	height: 44px;
+}
+
+.home .above-home-image-widget span {
+	font-size: 16px;
+	font-family: 'BebasRegular', Arial, sans-serif;
+	padding: 2px 5px;
+	color: #302e2f;
+	background: #FFF;
+	display: inline-block;
+	margin: 20px 0 0 15px;
+}
+
+.home .post.feature_block {
+	padding: 0
+}
+
+.feature-block {
+	background: #f45943;
+	color: #FFF;
+	padding:15px;
+}
+
+.feature-white-box {
+	background: #FFF;
+	color: #f45943;
+	padding: 15px;
+}
+
+.feature-block h4 {
+	font-size: 24px;
+	font-family: 'BebasRegular', Arial, sans-serif;
+	margin: 0;
+}
+
+.feature-block .feature-main-text {
+	font-size: 13px;
+	margin: 0 0 10px 0;
+}
+
+
+.feature-block .feature-sub-text {
+	border-bottom: 1px solid #f45943;
+	padding: 0 0 10px 0;
+	font-size: 13px;
+}
+
+
+.feature-block .feature-bold-text {
+	padding: 10px 0 0 0;
+	font-weight: bold;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
 
 
 /* Footer */

@@ -17,10 +17,12 @@
 	<div id="wrapper">
     	<div id="header-wrap">
             <header id="header">
-                <<?php esplanade_title_tag( 'site' ); ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php esplanade_title_tag( 'site' ); ?>>
+                <a href="<?php echo home_url( '/' ); ?>" rel="home">
+                <<?php esplanade_title_tag( 'site' ); ?> id="site-title"><?php bloginfo( 'name' ); ?></<?php esplanade_title_tag( 'site' ); ?>>
                 <?php if( ! is_active_sidebar( 1 ) ) : ?>
                     <<?php esplanade_title_tag( 'desc' ); ?> id="site-description"><?php bloginfo( 'description' ); ?></<?php esplanade_title_tag( 'desc' ); ?>>
                 <?php endif; ?>
+                </a>
                 
                 <nav id="access">
                     <a class="nav-toggle" href="#">Navigation</a>

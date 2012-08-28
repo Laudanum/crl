@@ -21,8 +21,8 @@ Template Name: person page
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
 						</header><!-- .entry-header -->
 						<div class="entry-content">
-							<?php the_content(); ?>
 							<?php the_meta(); ?>
+							<?php the_content(); ?>
 							<div class="clear"></div>
 						</div><!-- .entry-content -->
 						<?php wp_link_pages( array( 'before' => '<footer class="entry-utility"><p class="post-pagination">' . __( 'Pages:', 'esplanade' ), 'after' => '</p></footer><!-- .entry-utility -->' ) ); ?>

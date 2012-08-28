@@ -3,6 +3,7 @@
 // Include Custom Widgets
 include_once ('portfolio-widget.php');
 include_once ('featured-post-widget.php');
+include_once ('feature-widget.php');
 
 // Change to Google JQuery
 add_action( 'wp_enqueue_scripts', 'script_managment', 99);
@@ -19,8 +20,19 @@ function script_managment() {
 register_sidebar(
 	array(
     'id'          => 'front-page',
-    'name'        => __( 'Front page', $text_domain ),
+    'name'        => __( 'Front Page', $text_domain ),
     'description' => __( 'This sidebar is only used on the front page for the centre content area.', $text_domain ),
+	'before_widget' => '<article id="%1$s" class="post widget %2$s">',
+	'after_widget'  => '</article>',
+	'before_title'  => '<header class="entry-header"><h2 class="entry-title widgettitle">',
+	'after_title'   => '</h2></header>',
+	)
+);
+register_sidebar(
+	array(
+    'id'          => 'front-page-sidebar',
+    'name'        => __( 'Front Page Sidebar', $text_domain ),
+    'description' => __( 'This sidebar is only used on the front page for the sidebar content area.', $text_domain ),
 	'before_widget' => '<article id="%1$s" class="post widget %2$s">',
 	'after_widget'  => '</article>',
 	'before_title'  => '<header class="entry-header"><h2 class="entry-title widgettitle">',
@@ -30,7 +42,8 @@ register_sidebar(
 
 // Slider Image
 add_image_size( 'slider-full', 960, 340, true );
-add_image_size( 'portfolio-thumb', 200, 120, true );
+add_image_size( 'portfolio-thumb', 220, 118, true );
+add_image_size( 'front-page-thumb', 180, 180, true );
 
 
 // Call First Uploaded Image in Post
