@@ -485,7 +485,8 @@ h4 { font-size: 16px; }
 }
 
 .home .post.feature_block {
-	padding: 0
+	padding: 0;
+	margin: 0 0 20px 0;
 }
 
 .feature-block {
@@ -525,6 +526,89 @@ h4 { font-size: 16px; }
 	font-size: 22px;
 	text-transform: uppercase;
 }
+
+
+#news-post-widget-wrap h4 {
+	margin: 0;
+	border-bottom: 2px solid #FFF;
+}
+#news-post-widget-wrap h4 span {
+	background: white;
+	display: inline-block;
+	padding: 3px 15px 0px 15px;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0 0 0 10px;
+	color: #353334;
+}
+
+.news-post-block {
+	background: #e3e4de;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.news-post-item {
+	overflow: hidden;
+	margin: 0 0 25px 0;
+}
+.news-post-item.last {
+	margin: 0 0 5px 0;
+}
+
+.news-post-item h3 {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+.news-post-item h3 a {
+	color: #5d5d5d;
+}
+
+.news-post-date-wrap {
+	float: left;
+	margin: 0 10px 0 0;
+	width: 50px;
+}
+
+.news-post-text-wrap {
+	float: right;
+	width: 168px;
+}
+
+.news-post-date-wrap a {
+	font-size: 10px;
+	font-family: 'BebasRegular', Arial, sans-serif;
+	margin: 0;
+	color: #F45943;
+	background: #FFF;
+	padding: 3px;
+}
+
+.news-post-date {
+	background: url('images/news-calendar-icon.png') no-repeat 0 0 transparent;
+	color: #F45943;
+	font-weight: bold;
+	font-size: 22px;
+	display: block;
+	width: 50px;
+	height: 56px;
+	margin: 0 0 5px 0;
+}
+
+.news-post-date span {
+	display: inline-block;
+	margin: 22px 12px;
+}
+
+.news-post-excerpt a {
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+	color: #5d5d5d;
+}
+
+
 
 
 

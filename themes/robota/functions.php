@@ -4,6 +4,7 @@
 include_once ('portfolio-widget.php');
 include_once ('featured-post-widget.php');
 include_once ('feature-widget.php');
+include_once ('news-widget.php');
 
 // Change to Google JQuery
 add_action( 'wp_enqueue_scripts', 'script_managment', 99);
