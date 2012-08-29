@@ -65,10 +65,10 @@ h4 { font-size: 16px; }
 }
 
 #site-title {
-	background: url('images/logo.png') 70px 60px no-repeat #161616;
+	background: url('images/logo.png') 80px 60px no-repeat #161616;
 	position: relative;
-	margin: -20px 20px -20px -60px;
-	padding: 40px 10px 10px 70px;
+	margin: -20px 20px -20px -85px;
+	padding: 50px 0px 10px 80px;
 	z-index: 10;
 	text-indent: -9999px;
 	width: 140px;
@@ -116,7 +116,7 @@ h4 { font-size: 16px; }
 	margin: -20px 0 20px 0;
 	box-shadow: none;
 	background: #353334;
-	height: 400px;
+	height: 445px;
 }
 
 .slides {
@@ -126,7 +126,7 @@ h4 { font-size: 16px; }
 
 #slider .wp-post-image, #slider .entry-attachment {
 	padding: 0;
-	margin: 0;
+	margin: 10px 0 0 0;
 	background: none;
 	max-width: 100%;
 	box-shadow: none;
@@ -146,38 +146,39 @@ h4 { font-size: 16px; }
 #slider .entry-header, #slider .entry-summary {
 	margin: 0;
 	padding: 0;
+	height: 65px;
 }
 
 #slider .entry-title a {
 	color: #FFF;
 	font-size: 24px;
 	font-weight: normal;
-	line-height: 60px;
+	line-height: 80px;
 	padding: 0 20px;
 }
 
 .flex-direction-nav {
 	position: relative;
 	top: -140px;
-	left: 619px;
+	left: 675px;
 	height: 40px;
-	width: 250px;
+	width: 194px;
 	display: inline-block;
 	background: #FFF;
-	padding: 20px 30px;
+	padding: 27px 30px 8px 30px;
 	border-right: 1px solid #333;
 }
 
 .flex-direction-nav li {
 	float: left;
 	list-style-type: none;
-	padding: 5px;
+	padding: 0px;
 }
 
 .flex-direction-nav li a {
 	font-family: 'BebasRegular', Arial, sans-serif;
 	color: #353334;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 400;
 }
 .flex-direction-nav li .prev:before {

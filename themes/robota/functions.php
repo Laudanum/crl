@@ -42,7 +42,7 @@ register_sidebar(
 );
 
 // Slider Image
-add_image_size( 'slider-full', 960, 340, true );
+add_image_size( 'slider-full', 960, 360, true );
 add_image_size( 'portfolio-thumb', 220, 118, true );
 add_image_size( 'front-page-thumb', 180, 180, true );
 

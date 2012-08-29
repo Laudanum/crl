@@ -35,6 +35,7 @@ class Featured_Posts_Widget extends WP_Widget {
 		$category_text = $instance['category_text'];
 		
 		$show_images = isset($instance['show_images']) ? 'true' : 'false';
+		$use_sticky = isset($instance['use_sticky']) ? 'true' : 'false';
 		$post_title = isset($instance['post_title']) ? 'true' : 'false';
 		$post_meta = isset($instance['post_meta']) ? 'true' : 'false';
 		$post_excerpt = isset($instance['post_excerpt']) ? 'true' : 'false';
@@ -66,12 +67,21 @@ class Featured_Posts_Widget extends WP_Widget {
 						
 			$cat_id = get_cat_ID( $categories );
 			$cat_name = get_cat_name( $categories );
-			$cat_link = get_category_link( $categories ); 
+			$cat_link = get_category_link( $categories );
+			
+			if($use_sticky == 'true'):
+				$sticky = get_option( 'sticky_posts' );
+				$ignore_sticky = false;
+			else:
+				$ignore_sticky = true;
+			endif;
 			
 			$recent_posts = new WP_Query(array(
 				'showposts' => $post_count,
 				'post_type' => $post_type_array,
+				'ignore_sticky_posts' => $ignore_sticky,
 				'cat' => $categories,
+				'post__in'  => $sticky,
 			));
 			
 			$count = 1;
@@ -149,6 +159,7 @@ class Featured_Posts_Widget extends WP_Widget {
 		$instance['post_type'] = $new_instance['post_type'];
 		$instance['post_count'] = $new_instance['post_count'];
 		$instance['show_images'] = $new_instance['show_images'];
+		$instance['use_sticky'] = $new_instance['use_sticky'];
 		$instance['image_size'] = $new_instance['image_size'];
 		$instance['image_align'] = $new_instance['image_align'];
 		$instance['post_title'] = $new_instance['post_title'];
@@ -163,7 +174,7 @@ class Featured_Posts_Widget extends WP_Widget {
 
 	function form($instance)
 	{
-		$defaults = array('title' => '', 'categories' => 'all', 'post_count' => 3, 'image_size' => 'widget-image-thumb', 'image_align' => 'left', 'show_images' => 'on', 'post_title' => 'on', 'post_meta' => null, 'post_excerpt' => null, 'excerpt_length' => 15, 'category_link' => null, 'category_text' => 'Read More');
+		$defaults = array('title' => '', 'categories' => 'all', 'post_count' => 3, 'image_size' => 'widget-image-thumb', 'image_align' => 'left', 'show_images' => 'on', 'use_sticky' => 'on', 'post_title' => 'on', 'post_meta' => null, 'post_excerpt' => null, 'excerpt_length' => 15, 'category_link' => null, 'category_text' => 'Read More');
 		$instance = wp_parse_args((array) $instance, $defaults); ?>
         
 		<p>
@@ -196,6 +207,11 @@ class Featured_Posts_Widget extends WP_Widget {
 		<p>
             <input class="checkbox" type="checkbox" <?php checked($instance['show_images'], 'on'); ?> id="<?php echo $this->get_field_id('show_images'); ?>" name="<?php echo $this->get_field_name('show_images'); ?>" /> 
 			<label for="<?php echo $this->get_field_id('show_images'); ?>">Show Thumbnail?</label>
+		</p>
+		
+		<p>
+            <input class="checkbox" type="checkbox" <?php checked($instance['use_sticky'], 'on'); ?> id="<?php echo $this->get_field_id('use_sticky'); ?>" name="<?php echo $this->get_field_name('use_sticky'); ?>" /> 
+			<label for="<?php echo $this->get_field_id('use_sticky'); ?>">Show Only Sticky Posts?</label>
 		</p>
 		
         <p>
