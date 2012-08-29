@@ -23,7 +23,7 @@ get_header();
 			
 			$args = 	array(
 				'post_type' 	=> 'page',
-				'post_parent'	=> '425',
+				'post_parent'	=> '412',
 				'posts_per_page'=> -1
 			);
 			$projects_query = new WP_Query ( $args );
