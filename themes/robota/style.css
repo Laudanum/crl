@@ -342,11 +342,13 @@ h4 { font-size: 16px; }
 
 /* Sidebar and Widgets */
 
-.page-list {
+.page-list,
+.wpdt-pages {
 	background: #FFF;
 }
 
-.page-list .widget-title {
+.page-list .widget-title,
+.wpdt-pages .widget-title {
 	padding: 5px 10px;
 	font-size: 12px;
 	background: #D2D2D2;
@@ -356,14 +358,21 @@ h4 { font-size: 16px; }
 .page-list ul {
 }
 
-.page-list ul li {
-	padding: 5px 15px;
+.page-list ul li,
+.wpdt-pages .clip .dtNode {
+	padding: 10px 15px;
 	border-bottom: 1px solid #D2D2D2;
 	font-size: 12px;
+	display: block;
 }
 
-.page-list ul li a {
+.page-list ul li a,
+.wpdt-pages .dtNode a {
 	color: #302e2f;
+}
+
+.dtree_pge .dtNode {
+	display: none;
 }
 
 .home #featured-post-widget-wrap {

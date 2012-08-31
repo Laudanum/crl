@@ -1,10 +1,23 @@
-<?php $sticky = get_option( 'sticky_posts' ); ?>
-<?php if( ! empty( $sticky ) ) : ?>
-	<?php $slider = new WP_Query( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1, 'posts_per_page' => 99 ) ); ?>
-	<?php if( $slider->have_posts() ) : ?>
+<?php 
+	$querydetails = "
+		SELECT wposts.*
+		FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta
+		WHERE wposts.ID = wpostmeta.post_id
+		AND wpostmeta.meta_key = 'in_slider'
+		AND wpostmeta.meta_value = 'yes'
+		AND wposts.post_status = 'publish'
+		AND wposts.post_type = 'post'
+		ORDER BY wposts.post_date DESC
+	";
+
+	$pageposts = $wpdb->get_results($querydetails, OBJECT);
+
+	if ($pageposts):
+	?>
 		<section id="slider">
 			<ul class="slides">
-				<?php while( $slider->have_posts() ) : $slider->the_post(); ?>
+				<?php foreach ($pageposts as $post):
+       setup_postdata($post); ?>
 					<li>
 						<article <?php post_class(); ?>>
 							<?php if( has_post_format( 'video' ) ) : ?>
@@ -21,10 +34,8 @@
 							</div><!-- .entry-container -->
 						</article><!-- .post -->
 					</li>
-				<?php endwhile; ?>
+				<?php endforeach; ?>
 			</ul>
 			<div class="clear"></div>
 		</section><!-- #slider -->
-		<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
-<?php endif; ?>

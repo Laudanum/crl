@@ -36,7 +36,7 @@ class Page_List_Widget extends WP_Widget {
 				'posts_per_page'=> -1
 			);
 			$pages_query = new WP_Query ( $args );
-			echo '<ul>';
+			echo '<div class="dropdown-menu"><ul>';
 			while ( $pages_query->have_posts() ) : $pages_query->the_post();
 				echo '<li>';
 					echo '<a href="'; the_permalink(); echo '" title="'; the_title(); echo '">';
@@ -45,7 +45,10 @@ class Page_List_Widget extends WP_Widget {
 				echo '</li>';
 			endwhile;
 			wp_reset_query();
-			echo '</ul>';
+			echo '</ul></div>';
+			
+			echo '<script type="text/javascript">$(function() {$(\'.dropdown-toggle\').dropdown();});</script>';
+			echo '<script src="' . get_stylesheet_directory_uri() . '/bootstrap-dropdown.js"></script>';
 
 		
 		echo $after_widget;
