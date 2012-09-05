@@ -127,6 +127,12 @@ h4 { font-size: 16px; }
 	top: 0px;
 }
 
+#slider .slider-img-link
+{
+	display: block;
+	height: 360px;
+}
+
 #slider .wp-post-image, #slider .entry-attachment {
 	padding: 0px;
 	margin: 0px auto;
@@ -208,6 +214,8 @@ h4 { font-size: 16px; }
 }
 .flex-direction-nav li .prev:after {
 	content: ' / ';
+	padding: 0 2px 0 0;
+	color: #353334;
 }
 
 /* Content */
