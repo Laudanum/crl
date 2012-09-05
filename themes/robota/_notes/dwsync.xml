@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="index.php" server="ohyeahthemes.com//www/" local="129900967200000000" remote="129908717400000000" />
@@ -45,4 +46,53 @@
 <file name="news-widget.php" server="ohyeahthemes.com//www/" local="129905868325948000" remote="129908717400000000" />
 <file name="nice-navigation.js" server="ohyeahthemes.com//www/" local="129895917080000000" remote="129908717400000000" />
 <file name="bootstrap-dropdown.js" server="ohyeahthemes.com//www/" local="129908556778148000" remote="129908736600000000" />
+=======
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="index.php" server="ohyeahthemes.com//www/" local="129900967200000000" remote="129908717400000000" />
+<file name="header.php" server="ohyeahthemes.com//www/" local="129908560048898000" remote="129908739600000000" />
+<file name="functions.php" server="ohyeahthemes.com//www/" local="129906750635932000" remote="129908716800000000" />
+<file name="style.css" server="ohyeahthemes.com//www/" local="129908847321068000" remote="129909027000000000" />
+<file name="footer.php" server="ohyeahthemes.com//www/" local="129908561636058000" remote="129908741400000000" />
+<file name="slider.php" server="ohyeahthemes.com//www/" local="129908595072148000" remote="129908775000000000" />
+<file name="page.php" server="ohyeahthemes.com//www/" local="129896368200000000" remote="129908717400000000" />
+<file name="page-projects.php" server="ohyeahthemes.com//www/" local="129896624400000000" remote="129908717400000000" />
+<file name="widgets.php" server="ohyeahthemes.com//www/" local="129896411405153000" remote="129908717400000000" />
+<file name="portfolio-widget.php" server="ohyeahthemes.com//www/" local="129908552182378000" remote="129908731800000000" />
+<file name="404.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="featured-post-widget.php" server="ohyeahthemes.com//www/" local="129906781842772000" remote="129908716800000000" />
+<file name="attachment.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="comments.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-aside.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-audio.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-chat.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-gallery.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-image.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-quote.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-status.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content-video.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="content.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="front-page.php" server="ohyeahthemes.com//www/" local="129904997322080000" remote="129908716800000000" />
+<file name="image.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908716800000000" />
+<file name="person.php" server="ohyeahthemes.com//www/" local="129905199000000000" remote="129908717400000000" />
+<file name="searchform.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar-bottom.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar-footer.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar-header.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar-left.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar-right.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar-top.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="sidebar.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="template-content-sidebar.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="template-full-width.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="template-no-sidebars.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="template-sidebar-content-sidebar.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="template-sidebar-content.php" server="ohyeahthemes.com//www/" local="129896103600000000" remote="129908717400000000" />
+<file name="page-people.php" server="ohyeahthemes.com//www/" local="129899139000000000" remote="129908717400000000" />
+<file name="feature-widget.php" server="ohyeahthemes.com//www/" local="129905429642840000" remote="129908716800000000" />
+<file name="menu-script.js" server="ohyeahthemes.com//www/" local="129905427670680000" remote="129908717400000000" />
+<file name="news-widget.php" server="ohyeahthemes.com//www/" local="129905868325948000" remote="129908717400000000" />
+<file name="nice-navigation.js" server="ohyeahthemes.com//www/" local="129895917080000000" remote="129908717400000000" />
+<file name="bootstrap-dropdown.js" server="ohyeahthemes.com//www/" local="129908556778148000" remote="129908736600000000" />
+>>>>>>> 8f0ec37444fdd5d736c0ea14f5f7af594014484a
 </dwsync>
