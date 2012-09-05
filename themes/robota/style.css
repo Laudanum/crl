@@ -119,6 +119,7 @@ h4 { font-size: 16px; }
 	height: 429px;
 	position: relative;
 	overflow: hidden;
+	
 }
 
 .slides {
@@ -391,6 +392,21 @@ h4 { font-size: 16px; }
 	color: #302e2f;
 }
 
+.gksm-custom-menu-widget ul li.current-menu-parent li a
+{
+	color: #302e2f;
+}
+
+.gksm-custom-menu-widget ul li.current-menu-parent a, .gksm-custom-menu-widget ul li li.current-menu-item a
+{
+	color: #D54E21;
+}
+
+.gksm-custom-menu-widget ul li.current-menu-parent .sub-menu
+{
+	display: block;
+}
+
 .dtree_pge .dtNode {
 	display: none;
 }
@@ -398,8 +414,8 @@ h4 { font-size: 16px; }
 
 .gksm-custom-menu-widget ul li
 {
-	background: url('images/projects-list-bg.png') 5px 17px no-repeat;
-	padding-left: 20px;
+	background: url('images/projects-list-bg.png') 10px 17px no-repeat;
+	padding-left: 25px;
 }
 
 .gksm-custom-menu-widget ul.sub-menu

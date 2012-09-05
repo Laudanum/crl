@@ -39,7 +39,7 @@
 				controlNav: false,		//Boolean: Create navigation for paging control of each slide
 				directionNav: true,		//Boolean: Create navigation for previous/next navigation? (true/false)
 				prevText: "Previous",	//String: Set the text for the "previous" directionNav item
-				nextText: "Next",		//String: Set the text for the "next" directionNav item
+				nextText: "Next"		//String: Set the text for the "next" directionNav item
 			});
 		</script>
 </body>
