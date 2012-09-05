@@ -1,1 +1,1 @@
-$(document).ready(function(){	$('ul#menu-project-menu > li > a').click(function(){		$('.sub-menu', $(this).parents('li')).slideToggle('fast');		return false;	});});
+$(document).ready(function(){		//Project menu - submenu show/hide	$('ul#menu-project-menu > li > a').click(function(){		$('.sub-menu', $(this).parents('li')).slideToggle('fast');		return false;	});});
