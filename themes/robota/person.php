@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <?php
 /*
 Template Name: person page
@@ -17,12 +18,19 @@ Template Name: person page
 								<?php esplanade_breadcrumbs(); ?>
 							</div><!-- #location -->
 						<?php endif; ?>
-						<header class="entry-header">
-							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
-						</header><!-- .entry-header -->
 						<div class="entry-content">
-							<?php the_meta(); ?>
-							<?php the_content(); ?>
+							<div class="person-profile-image">
+								<?php if (has_post_thumbnail( get_the_ID())) : ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
+								<img src="<?php echo $image[0]?>" width="200" /></div>
+								<?php endif; ?>
+							<div class="person-meta">
+								<header class="entry-header">
+									<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
+								</header><!-- .entry-header -->
+								<?php the_meta(); ?></div>
+							<div class="clear"></div>
+							<div class="entry-content-wrapper"><?php the_content(); ?></div>
 							<div class="clear"></div>
 						</div><!-- .entry-content -->
 						<?php wp_link_pages( array( 'before' => '<footer class="entry-utility"><p class="post-pagination">' . __( 'Pages:', 'esplanade' ), 'after' => '</p></footer><!-- .entry-utility -->' ) ); ?>
