@@ -40,6 +40,7 @@ h4 { font-size: 16px; }
 .single .entry-title, .page .entry-title, .error404 .entry-title {
 	font-size: 22px;
 	font-weight:normal !important;
+	vertical-align: text-top;
 }
 
 #wrapper {
@@ -388,10 +389,24 @@ h4 { font-size: 16px; }
 	margin-top : 18px;
 }
 
+.person-meta .entry-header {
+	margin-top : -4px;
+}
+
+.post-meta-key {
+	margin-right : 5px;
+}
 
 .entry-content-wrapper {
 	margin-top : 20px;
 }
+
+.entry-content-wrapper h2 {
+	font-weight : normal;
+	word-spacing: 3px;
+	font-size : 22px;
+}
+
 /* Sidebar and Widgets */
 
 .page-list,
@@ -414,7 +429,7 @@ h4 { font-size: 16px; }
 .page-list ul li,
 .gksm-custom-menu-widget ul li,
 .wpdt-pages .clip .dtNode {
-	padding: 6px 15px;
+	padding: 3px 15px;
 	border-bottom: 1px solid #D2D2D2;
 	font-size: 12px;
 	display: block;
@@ -448,8 +463,7 @@ h4 { font-size: 16px; }
 
 .gksm-custom-menu-widget ul li
 {
-	background: url('images/projects-list-bg.png') 8px 14px no-repeat;
-	padding-left: 25px;
+	padding-left: 10px;
 }
 
 .gksm-custom-menu-widget ul.sub-menu

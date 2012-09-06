@@ -28,7 +28,7 @@ Template Name: person page
 								<header class="entry-header">
 									<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
 								</header><!-- .entry-header -->
-								<?php the_meta(); ?></div>
+								<?php the_person_meta(); ?></div>
 							<div class="clear"></div>
 							<div class="entry-content-wrapper"><?php the_content(); ?></div>
 							<div class="clear"></div>

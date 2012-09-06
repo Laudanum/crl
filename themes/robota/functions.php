@@ -95,3 +95,18 @@ function crl_scripts()
     wp_enqueue_script( 'custom-script' );  
 }  
 add_action( 'wp_enqueue_scripts', 'crl_scripts');  
+
+function the_person_meta() {
+	if ( $keys = get_post_custom_keys() ) {
+		echo "<ul class='post-meta'>\n";
+		foreach ( (array) $keys as $key ) {
+			$keyt = trim($key);
+			if ( is_protected_meta( $keyt, 'post' ) )
+				continue;
+			$values = array_map('trim', get_post_custom_values($key));
+			$value = implode($values,', ');
+			echo apply_filters('the_meta_key', "<li><span class='post-meta-key'>$key</span> $value</li>\n", $key, $value);
+		}
+		echo "</ul>\n";
+	}
+}
