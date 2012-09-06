@@ -486,7 +486,7 @@ h4 { font-size: 16px; }
 }
 
 .home #featured-post-widget-wrap h4 {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'BebasRegular', Arial, sans-serif;
 	font-weight: normal;
 	word-spacing: 3px;
@@ -518,7 +518,6 @@ h4 { font-size: 16px; }
 	padding: 0;
 	background: none;
 	float: none;
-	border-bottom: 3px solid #43def5;
 }
 
 .home .featured-post-item h3 {
@@ -526,6 +525,7 @@ h4 { font-size: 16px; }
 	height: 50px;
 	overflow: hidden;
 	font-weight: normal;
+	margin-top : 15px;
 }
 
 .home .featured-post-item h3 a {
@@ -539,6 +539,16 @@ h4 { font-size: 16px; }
 	color: #5d5d5d;
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.home .featured-post-item .featured-image-wrapper {
+	height : 160px;
+	overflow : hidden;
+}
+
+.home .featured-post-item .featured-image-border {
+	height : 1px;
+	border-bottom: 2px solid #43def5;
 }
 
 .home .post {
