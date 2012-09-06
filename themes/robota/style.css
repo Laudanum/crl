@@ -59,9 +59,18 @@ h4 { font-size: 16px; }
 }
 
 #header {
-	background: url('images/niea_logo.png') no-repeat 725px 0 transparent;
 	margin: 0 auto;
 	width: 960px;
+}
+
+#header .super-logo {
+	background: url('images/niea_logo.png') no-repeat 0 0 transparent;
+	position : absolute;
+	bottom : 25px;
+	right : -12px;
+	z-index : 10;
+	width : 255px;
+	height : 95px;
 }
 
 #site-title {
@@ -84,6 +93,7 @@ h4 { font-size: 16px; }
 #access {
 	background: none;
 	box-shadow: none;
+	position :relative;
 }
 
 #access a {

@@ -39,5 +39,6 @@
                     <a class="nav-toggle" href="#">Navigation</a>
                     <?php wp_nav_menu( array( 'theme_location' => 'primary_nav' ) ); ?>
                     <div class="clear"></div>
+					<div class="super-logo"></div>
                 </nav><!-- #access -->
         </div><!-- #header-wrap -->
