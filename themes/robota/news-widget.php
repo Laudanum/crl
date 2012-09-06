@@ -92,7 +92,6 @@ class News_Widget extends WP_Widget {
 							echo '<span class="news-post-excerpt">';
 								echo '<a href="'; echo the_permalink(); echo '">';
 									echo string_limit_words(get_the_excerpt(), $excerpt_length);
-									echo ' &hellip;';
 								echo '</a>';
 							 echo '</span>';
 						endif;
