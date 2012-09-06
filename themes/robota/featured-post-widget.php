@@ -91,13 +91,13 @@ class Featured_Posts_Widget extends WP_Widget {
                      
 					
 					if($show_images == 'true'):
-                        echo '<a href="';
+                        echo '<div class="featured-image-wrapper"><a href="';
 						the_permalink();
 						echo '" title="';
 						the_title();
-						echo '">';
+						echo '" style="background:url()">';
                             default_main_image($post->ID, $image_size, $image_align);
-                        echo '</a>';
+                        echo '</a></div><div class="featured-image-border"></div>';
                     endif; 
 					 
 					if($post_title == 'true'):
