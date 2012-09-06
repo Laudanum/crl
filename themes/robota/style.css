@@ -251,7 +251,7 @@ h4 { font-size: 16px; }
 .home #container #content {
 	margin: 0 0 40px 0;
 	padding: 0;
-	width: 68.3%;
+	width: 70%;
 	box-shadow: none;
 	float: left;
 }
@@ -475,8 +475,8 @@ h4 { font-size: 16px; }
 
 .home .featured-post-item {
 	float: left;
-	width: 177px;
-	margin: 0 30px 0 0;
+	width: 182px;
+	margin: 0 32px 0 0;
 }
 .home .featured-post-item.last {
 	margin: 0;
