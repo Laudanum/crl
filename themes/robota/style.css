@@ -374,8 +374,22 @@ h4 { font-size: 16px; }
 	display: inline-block;
 }
 
+.person-profile-image, .person-meta {
+	float : left;
+}
+
+.person-meta {
+	margin-left: 20px;
+}
+
+.person-meta .post-meta {
+	margin-top : 18px;
+}
 
 
+.entry-content-wrapper {
+	margin-top : 20px;
+}
 /* Sidebar and Widgets */
 
 .page-list,
