@@ -327,7 +327,7 @@ h4 { font-size: 16px; }
 
 .portfolio-entry .entry-header {
 	margin: 0;
-	padding: 10px 10px 0 10px;
+	padding: 8px 10px 0 8px;
 	background: #302e2f;
 	height: 25px;
 	overflow: hidden;
@@ -658,7 +658,7 @@ h4 { font-size: 16px; }
 .news-post-item h3 {
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
-	margin: 0;
+	margin: 3px 0 0 0;
 }
 .news-post-item h3 a {
 	color: #5d5d5d;
@@ -673,35 +673,40 @@ h4 { font-size: 16px; }
 .news-post-text-wrap {
 	float: right;
 	width: 168px;
+	line-height : 19px !important;
 }
 
 .news-post-date-wrap a {
-	font-size: 10px;
+	font-size: 9px;
 	font-family: 'BebasRegular', Arial, sans-serif;
 	margin: 0;
 	color: #F45943;
 	background: #FFF;
-	padding: 3px;
+	display : inline-block;
+	width : 48px;
+	text-align : center;
+	margin-left : 1px;
 }
 
 .news-post-date {
 	background: url('images/news-calendar-icon.png') no-repeat 0 0 transparent;
 	color: #F45943;
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 28px;
 	display: block;
 	width: 50px;
 	height: 56px;
 	margin: 0 0 5px 0;
+	text-align: center;
 }
 
 .news-post-date span {
 	display: inline-block;
-	margin: 22px 12px;
+	margin: 25px 9px;
 }
 
 .news-post-excerpt a {
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: normal;
 	margin: 0;
 	color: #5d5d5d;
