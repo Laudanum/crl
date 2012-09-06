@@ -469,14 +469,15 @@ h4 { font-size: 16px; }
 
 .home .featured-post-block {
 	border: 1px solid #DEDEDE;
-	padding: 10px;
+	padding: 15px;
+	padding-bottom: 15px;
 	overflow: hidden;
 }
 
 .home .featured-post-item {
 	float: left;
 	width: 182px;
-	margin: 0 32px 0 0;
+	margin: 0 26px 0 0px;
 }
 .home .featured-post-item.last {
 	margin: 0;
