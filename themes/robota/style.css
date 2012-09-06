@@ -171,7 +171,7 @@ h4 { font-size: 16px; }
 	margin: 0px;
 	padding: 0px;
 	text-align: left;
-	line-height: 69px;
+	line-height: 78px;
 }
 
 #slider .entry-title a {
@@ -461,7 +461,7 @@ h4 { font-size: 16px; }
 	font-weight: normal;
 	word-spacing: 3px;
 	padding: 3px 10px;
-	margin: 0 10px 15px 10px;
+	margin: 0 10px 15px 0px;
 	background: #302e2f;
 	color: #FFF;
 	display: inline-block;
