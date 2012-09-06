@@ -39,6 +39,7 @@ h4 { font-size: 16px; }
 
 .single .entry-title, .page .entry-title, .error404 .entry-title {
 	font-size: 22px;
+	font-weight:normal !important;
 }
 
 #wrapper {
@@ -364,11 +365,12 @@ h4 { font-size: 16px; }
 }
 
 .post-meta-key {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'BebasRegular', Arial, sans-serif;
 	font-weight: normal;
 	word-spacing: 3px;
 	padding: 3px 10px;
+	padding-bottom : 0px;
 	background: #302e2f;
 	color: #FFF;
 	display: inline-block;
