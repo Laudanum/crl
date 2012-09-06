@@ -147,7 +147,7 @@ Class Gecka_Submenu_Submenu {
 		// current page is top level element
 		if( $submenu === 'current' ) {
 		    global $wp_query;
-			$submenu = $this->get_associated_nav_menu_item($wp_query->get_queried_object_id(), &$menu_items, $_type);
+			$submenu = $this->get_associated_nav_menu_item($wp_query->get_queried_object_id(), $menu_items, $_type);
 		}
 		// top parent page is the top level element	
 		else if( $submenu === 'top' ) {
@@ -155,7 +155,7 @@ Class Gecka_Submenu_Submenu {
 			global $post, $wp_query;
 			
 			if( is_a($post, 'stdClass') && (int)$post->ID ) {
-			 	if( $submenu = $this->get_top_ancestor ($wp_query->get_queried_object_id(), &$menu_items, $_type) ) 
+			 	if( $submenu = $this->get_top_ancestor ($wp_query->get_queried_object_id(), $menu_items, $_type) ) 
 			 		$submenu = $submenu->ID;
 			}
 			
@@ -170,14 +170,14 @@ Class Gecka_Submenu_Submenu {
             
             if( !is_object($submenu) ) {
                 
-                $submenu_item = $this->get_menu_item ($submenu, &$menu_items);
+                $submenu_item = $this->get_menu_item ($submenu, $menu_items);
 		        
 		        
-		        if( !$submenu_item ) $submenu_item = $this->get_associated_nav_menu_item($submenu, &$menu_items, $type);
+		        if( !$submenu_item ) $submenu_item = $this->get_associated_nav_menu_item($submenu, $menu_items, $type);
                 if(!$submenu_item) return;
 		    }
             
-		    if( !$this->menu_item_has_child($submenu_item->ID, &$menu_items)) return;
+		    if( !$this->menu_item_has_child($submenu_item->ID,$menu_items)) return;
 		    
 		    $submenu_id = $submenu_item->ID;
 		    
@@ -237,7 +237,7 @@ Class Gecka_Submenu_Submenu {
 	
 	    $offset = abs( (int)$offset );
 	
-	    $AssociatedMenuItems = $this->get_associated_nav_menu_items( $object_id, &$menu_items, $type );
+	    $AssociatedMenuItems = $this->get_associated_nav_menu_items( $object_id, $menu_items, $type );
          
         if( !$num = sizeof($AssociatedMenuItems) ) return false;
           
@@ -262,7 +262,7 @@ Class Gecka_Submenu_Submenu {
 	    if( !empty($_menu_items) || $object_type !== 'post_type' ) return $_menu_items;
 	    
 	    // no associated 'post_type' menu item found, looking for associated 'taxonomy' menu item
-	    return $this->get_associated_nav_menu_terms_items ( $object_id, &$menu_items );
+	    return $this->get_associated_nav_menu_terms_items ( $object_id, $menu_items );
     
     }    
     
@@ -282,7 +282,7 @@ Class Gecka_Submenu_Submenu {
 	    	
 	    	foreach ($terms as $term) {
 	    		
-	    		$_menu_items = $this->get_associated_nav_menu_items($term->term_id, &$menu_items, 'taxonomy');
+	    		$_menu_items = $this->get_associated_nav_menu_items($term->term_id, $menu_items, 'taxonomy');
 	    		if( !empty($_menu_items) ) return $_menu_items;
 	    		
 	    	}
@@ -300,14 +300,14 @@ Class Gecka_Submenu_Submenu {
      */
 	private function get_top_ancestor ($postID, &$menu_items, $type='post_type')  {
         
-        $Item = $this->get_associated_nav_menu_item($postID, &$menu_items, $type);
+        $Item = $this->get_associated_nav_menu_item($postID, $menu_items, $type);
         
         if(!$Item) return;
         
         $Ancestror = $Item;
         while(1) {
             if($Item->menu_item_parent) {
-                $Item = $this->get_menu_item($Item->menu_item_parent, &$menu_items);
+                $Item = $this->get_menu_item($Item->menu_item_parent, $menu_items);
                 continue;
             }
             break;

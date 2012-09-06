@@ -46,7 +46,7 @@ class Gecka_Submenu_NavMenuHacks {
                         
                         $pages = get_pages( apply_filters('gecka-submenu-get_pages', array('child_of' => $item->object_id, 'sort_column' => 'menu_order, post_title')) );
                         
-                        $this->setup_posts ('post', &$item, &$pages, &$items, &$order);
+                        $this->setup_posts ('post', $item, $pages, $items, $order);
                         
                         break;
                     
@@ -236,7 +236,7 @@ class Gecka_Walker_Nav_Menu_Edit extends Walker_Nav_Menu  {
 	 * @param string $output Passed by reference.
 	 * @param int $depth Depth of page.
 	 */
-	function start_lvl(&$output) {}
+	function start_lvl($output) {}
 
 	/**
 	 * @see Walker_Nav_Menu::end_lvl()
@@ -245,7 +245,7 @@ class Gecka_Walker_Nav_Menu_Edit extends Walker_Nav_Menu  {
 	 * @param string $output Passed by reference.
 	 * @param int $depth Depth of page.
 	 */
-	function end_lvl(&$output) {
+	function end_lvl($output) {
 	}
 
 	/**
