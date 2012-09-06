@@ -336,10 +336,10 @@ h4 { font-size: 16px; }
 }
 
 .portfolio-entry .entry-title {
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: normal;
 	margin: 0;
-	padding: 1px 5px;
+	padding: 2px 5px;
 	color: #302e2f;
 	background: #FFF;
 	display: inline-block;
