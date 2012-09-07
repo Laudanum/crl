@@ -510,8 +510,8 @@ h4 { font-size: 16px; }
 
 .home .featured-post-item {
 	float: left;
-	width: 182px;
-	margin: 0 26px 0 0px;
+	width: 176px;
+	margin: 0 36px 0 0px;
 }
 .home .featured-post-item.last {
 	margin: 0;
@@ -546,7 +546,7 @@ h4 { font-size: 16px; }
 }
 
 .home .featured-post-item .featured-image-wrapper {
-	height : 160px;
+	height : 157px;
 	overflow : hidden;
 }
 

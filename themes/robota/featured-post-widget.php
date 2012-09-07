@@ -96,7 +96,7 @@ class Featured_Posts_Widget extends WP_Widget {
 						echo '" title="';
 						the_title();
 						echo '" style="background:url()">';
-                            default_main_image($post->ID, $image_size, $image_align);
+                            default_main_image($post->ID, 176, $image_align);
                         echo '</a></div><div class="featured-image-border"></div>';
                     endif; 
 					 
