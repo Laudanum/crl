@@ -566,7 +566,7 @@ h4 { font-size: 16px; }
 }
 .home .post.widget_sp_image h2 {
 	font-weight: normal;
-	line-height: 24px;
+	line-height: 20px;
 	font-size: 18px;
 	word-spacing : 4px;
 }
@@ -601,7 +601,7 @@ h4 { font-size: 16px; }
 	color: #302e2f;
 	background: #FFF;
 	display: inline-block;
-	margin: 15px 0 0 0;
+	margin: 20px 0 0 0;
 	line-height : 20px;
 	vertical-align: middle;
 }
@@ -617,13 +617,13 @@ h4 { font-size: 16px; }
 }
 
 .home .above-home-image-widget span {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'BebasRegular', Arial, sans-serif;
-	padding: 2px 5px;
+	padding: 5px 10px;
 	color: #302e2f;
 	background: #FFF;
 	display: inline-block;
-	margin: 16px 0 0 15px;
+	margin: 14px 0 0 15px;
 }
 
 .home .post.feature_block {
