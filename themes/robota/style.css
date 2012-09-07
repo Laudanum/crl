@@ -38,7 +38,7 @@ h3 { font-size: 18px; }
 h4 { font-size: 16px; }
 
 .single .entry-title, .page .entry-title, .error404 .entry-title {
-	font-size: 22px;
+	font-size: 20px;
 	font-weight:normal !important;
 	vertical-align: text-top;
 }
