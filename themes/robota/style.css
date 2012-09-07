@@ -117,10 +117,17 @@ h4 { font-size: 16px; }
 	border-right: none;
 }
 
-
 #access ul li ul li {
 	padding: 0;
-	border-right: none;
+	border-right : none;
+}
+
+#access ul li ul li a {
+	background : #555555 !important;
+}
+
+#access ul li ul li a:hover {
+	background : #444444 !important;
 }
 
 
