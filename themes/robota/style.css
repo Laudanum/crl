@@ -768,14 +768,18 @@ h4 { font-size: 16px; }
 }
 
 
-
-
-
 /* Footer */
 
 #footer-wrap {
 	margin: 0 auto;
 	background: #403e3f;
+}
+
+#footer-wrap.stuck {
+	position : fixed;
+	bottom : 0px;
+	left : 0px;
+	width : 100%;
 }
 
 #footer {
