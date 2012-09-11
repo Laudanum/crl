@@ -11,3 +11,8 @@ WordPress Plugins
 * Login Lockdown
 * Google XLM Sitemaps
 * Hello Dolly
+
+Developer Notes
+
+* JavaScript for Projects menu + fixed footer fix is inside esplanade/scripts/main
+* robot/page.php has some custom logic to get the parent page (Project) title
