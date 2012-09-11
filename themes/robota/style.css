@@ -745,13 +745,14 @@ h4 { font-size: 16px; }
 .news-post-date {
 	background: url('images/news-calendar-icon.png') no-repeat 0 0 transparent;
 	color: #F45943;
-	font-weight: bold;
-	font-size: 28px;
+	font-weight: normal;
+	font-size: 25px;
 	display: block;
 	width: 50px;
 	height: 56px;
 	margin: 0 0 5px 0;
 	text-align: center;
+	font-family : 'BebasRegular';
 }
 
 .news-post-date span {
