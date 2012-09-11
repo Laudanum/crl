@@ -21,7 +21,7 @@ Template Name: person page
 						<div class="entry-content">
 							<div class="person-profile-image">
 								<?php if (has_post_thumbnail( get_the_ID())) : ?>
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' ); ?>
 								<img src="<?php echo $image[0]?>" width="200" /></div>
 								<?php endif; ?>
 							<div class="person-meta">
