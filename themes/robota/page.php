@@ -16,12 +16,19 @@
 						<header class="entry-header">
 							<?php $parent = get_post( $post->post_parent ); 
 								$parent_title = get_the_title( $parent );
-								if( $parent_title && get_the_title($parent->post_parent) == 'Projects' ) : ?>
+								$isProj = get_the_title($parent->post_parent) == 'Projects';
+								if( $parent_title && $isProj ) : ?>
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php echo $parent_title ?></<?php esplanade_title_tag( 'post' ); ?>>
 							<?php
 								endif;
 							?>
+							<?php if( $isProj ) : ?>
+							<ul class="post-meta">
+								<li><span class="post-meta-key"><?php the_title(); ?></li>
+							</ul>
+							<?php else : ?>
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
+							<?php endif; ?>
 						</header><!-- .entry-header -->
 						<div class="entry-content">
 							<?php the_content(); ?>

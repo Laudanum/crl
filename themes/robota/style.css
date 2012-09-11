@@ -43,6 +43,10 @@ h4 { font-size: 16px; }
 	vertical-align: text-top;
 }
 
+.page .entry-title {
+	margin-bottom : 16px;
+}
+
 #wrapper {
 	margin: 0 auto;
 	padding: 0;
