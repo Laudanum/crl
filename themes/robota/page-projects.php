@@ -24,7 +24,6 @@ get_header();
 			$args = 	array(
 				'post_type' 	=> 'page',
 				'post_parent'	=> '412',
-				'sort_column'  => 'post_title',
 				'posts_per_page'=> -1
 			);
 			$projects_query = new WP_Query ( $args );
