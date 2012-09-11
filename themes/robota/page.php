@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 	<div id="container">
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 			<div class="content-sidebar-wrap">
@@ -13,6 +14,13 @@
 							</div><!-- #location -->
 						<?php endif; ?>
 						<header class="entry-header">
+							<?php $parent = get_post( $post->post_parent ); 
+								$parent_title = get_the_title( $parent );
+								if( $parent_title && get_the_title($parent->post_parent) == 'Projects' ) : ?>
+							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php echo $parent_title ?></<?php esplanade_title_tag( 'post' ); ?>>
+							<?php
+								endif;
+							?>
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
 						</header><!-- .entry-header -->
 						<div class="entry-content">
