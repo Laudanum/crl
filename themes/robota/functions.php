@@ -110,3 +110,21 @@ function the_person_meta() {
 		echo "</ul>\n";
 	}
 }
+
+// Xreferences Shortcode - gets the publication posts //
+function xref_shortcode_publications(){
+	$postId = get_the_ID();
+	$posts = explode(",", is_xref_get_list( $postId ));
+	
+	$str = '<ul class="xref-publications">';
+	foreach( $posts as $post ){
+		$thePost = get_post( $post );
+		$str .= '<li><a href="'. get_permalink( $post ) . '">
+			' . $thePost->post_title . '
+		</a></li>';
+	}
+	$str .= '</ul>';
+	return $str;	
+}
+
+add_shortcode( 'xref_publications', 'xref_shortcode_publications' );
