@@ -39,7 +39,7 @@ h3 { font-size: 20px; }
 h4 { font-size: 24px; }
 
 .single .entry-title, .page .entry-title, .error404 .entry-title {
-	font-size: 20px;
+	font-size: 24px;
 	font-weight:normal !important;
 	vertical-align: text-top;
 }
@@ -130,6 +130,7 @@ h4 { font-size: 24px; }
 
 #access ul li ul li a {
 	background : #555555 !important;
+	font-size: 14px;
 }
 
 #access ul li ul li a:hover {
@@ -193,7 +194,7 @@ h4 { font-size: 24px; }
 
 #slider .entry-title a {
 	color: #FFF;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: normal;
 	line-height: 69px;
 	padding: 0px 0px 0px 20px;
@@ -360,7 +361,7 @@ h4 { font-size: 24px; }
 }
 
 .portfolio-entry .entry-title {
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: normal;
 	margin: 0;
 	padding: 2px 5px;
@@ -390,7 +391,7 @@ h4 { font-size: 24px; }
 }
 
 .post-meta-key {
-	font-size: 14px;
+	font-size: 16px;
 	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -429,7 +430,7 @@ h4 { font-size: 24px; }
 .entry-content-wrapper h2 {
 	font-weight : normal;
 	word-spacing: 3px;
-	font-size : 20px;
+	font-size : 22px;
 }
 
 /* Sidebar and Widgets */
@@ -443,7 +444,7 @@ h4 { font-size: 24px; }
 .page-list .widget-title,
 .wpdt-pages .widget-title, .gksm-custom-menu-widget .widget-title{
 	padding: 8px 10px;
-	font-size: 14px;
+	font-size: 16px;
 	background: #D2D2D2;
 	color: #302e2f;
 }
@@ -456,7 +457,7 @@ h4 { font-size: 24px; }
 .wpdt-pages .clip .dtNode {
 	padding: 3px 15px;
 	border-bottom: 1px solid #e6e6e6;
-	font-size: 14px;
+	font-size: 13px;
 	display: block;
 }
 
@@ -511,7 +512,7 @@ h4 { font-size: 24px; }
 }
 
 .home #featured-post-widget-wrap h4 {
-	font-size: 14px;
+	font-size: 16px;
 	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -618,7 +619,7 @@ h4 { font-size: 24px; }
 }
 
 .home .post.widget_sp_image .widget_sp_image-description a {
-	font-size: 13px;
+	font-size: 16px;
 	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
 	text-transform: uppercase;
 	padding: 3px 10px 1px;
@@ -641,7 +642,7 @@ h4 { font-size: 24px; }
 }
 
 .home .above-home-image-widget span {
-	font-size: 14px;
+	font-size: 18px;
 	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
 	text-transform: uppercase;
 	padding: 5px 10px;
@@ -669,14 +670,14 @@ h4 { font-size: 24px; }
 }
 
 .feature-block h4 {
-	font-size: 32px;
+	font-size: 36px;
 	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
 	text-transform: uppercase;
 	margin: 0;
 }
 
 .feature-block .feature-main-text {
-	font-size: 13px;
+	font-size: 14px;
 	margin: 7px 0 20px 0;
 	line-height : 18px;
 }
@@ -685,7 +686,7 @@ h4 { font-size: 24px; }
 .feature-block .feature-sub-text {
 	border-bottom: 1px solid #f45943;
 	padding: 0 0 6px 0;
-	font-size: 13px;
+	font-size: 14px;
 	line-height : 16px;
 }
 
@@ -706,7 +707,7 @@ h4 { font-size: 24px; }
 	background: white;
 	display: inline-block;
 	padding: 3px 15px 0px 15px;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: normal;
 	margin: 0 0 0 10px;
 	color: #353334;
@@ -748,7 +749,7 @@ h4 { font-size: 24px; }
 }
 
 .news-post-date-wrap a {
-	font-size: 9px;
+	font-size: 11px;
 	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
 	text-transform: uppercase;
 	margin: 0;
