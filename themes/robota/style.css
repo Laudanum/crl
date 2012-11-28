@@ -10,7 +10,7 @@ Version:        0.1.0
 
 @import url("../esplanade/style.css");
 
-@font-face {
+/*@font-face {
     font-family: 'BebasRegular';
     src: url('fonts/BEBAS___-webfont.eot');
     src: url('fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
@@ -19,32 +19,33 @@ Version:        0.1.0
          url('fonts/BEBAS___-webfont.svg#BebasRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 body {
 	background: #f1f2ed;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 21px !important;
 	font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3, h4 {
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-family: "jaf-bernina-sans-comp", Arial, sans-serif;
+	text-transform: uppercase;
 }
 
-h1 { font-size: 24px; }
-h2 { font-size: 20px; }
-h3 { font-size: 18px; }
-h4 { font-size: 16px; }
+h1 { font-size: 30px; }
+h2 { font-size: 26px; }
+h3 { font-size: 20px; }
+h4 { font-size: 24px; }
 
 .single .entry-title, .page .entry-title, .error404 .entry-title {
-	font-size: 20px;
+	font-size: 26px;
 	font-weight:normal !important;
 	vertical-align: text-top;
 }
 
 .page .entry-title {
-	margin-bottom : 16px;
+	margin-bottom : 24px;
 }
 
 #wrapper {
@@ -91,7 +92,7 @@ h4 { font-size: 16px; }
 
 #site-title a {
 	color: #FFF;
-	font-size: 12px;
+	font-size: 14px;
 	position: relative;
 	top: 25px;
 }
@@ -103,14 +104,15 @@ h4 { font-size: 16px; }
 }
 
 #access a {
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 }
 
 #access ul {
-	font-size: 14px;
+	font-size: 17px;
 	max-width: 100%;
 	margin: 40px 0 0 40px;
-	word-spacing: 3px;
+	word-spacing: 3
 }
 
 #access ul li {
@@ -128,6 +130,7 @@ h4 { font-size: 16px; }
 
 #access ul li ul li a {
 	background : #555555 !important;
+	font-size: 14px;
 }
 
 #access ul li ul li a:hover {
@@ -191,7 +194,7 @@ h4 { font-size: 16px; }
 
 #slider .entry-title a {
 	color: #FFF;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: normal;
 	line-height: 69px;
 	padding: 0px 0px 0px 20px;
@@ -202,7 +205,7 @@ h4 { font-size: 16px; }
 	top: 284px;
 	right: 0px;
 	height: 40px;
-	width: 194px;
+	width: 175px;
 	background: #FFF;
 	padding: 27px 30px 8px 30px;
 	border-right: 1px solid #333;
@@ -216,9 +219,10 @@ h4 { font-size: 16px; }
 }
 
 .flex-direction-nav li a {
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	color: #353334;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: 400;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -288,7 +292,7 @@ h4 { font-size: 16px; }
 }
 
 .entry-content {
-	font-size : 12px;
+	font-size : 14px;
 }
 
 .entry-content p {
@@ -357,7 +361,7 @@ h4 { font-size: 16px; }
 }
 
 .portfolio-entry .entry-title {
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: normal;
 	margin: 0;
 	padding: 2px 5px;
@@ -387,8 +391,9 @@ h4 { font-size: 16px; }
 }
 
 .post-meta-key {
-	font-size: 14px;
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-size: 16px;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	font-weight: normal;
 	word-spacing: 3px;
 	padding: 3px 10px;
@@ -425,7 +430,7 @@ h4 { font-size: 16px; }
 .entry-content-wrapper h2 {
 	font-weight : normal;
 	word-spacing: 3px;
-	font-size : 20px;
+	font-size : 22px;
 }
 
 /* Publication page */
@@ -446,7 +451,7 @@ h4 { font-size: 16px; }
 .page-list .widget-title,
 .wpdt-pages .widget-title, .gksm-custom-menu-widget .widget-title{
 	padding: 8px 10px;
-	font-size: 12px;
+	font-size: 16px;
 	background: #D2D2D2;
 	color: #302e2f;
 }
@@ -459,7 +464,7 @@ h4 { font-size: 16px; }
 .wpdt-pages .clip .dtNode {
 	padding: 3px 15px;
 	border-bottom: 1px solid #e6e6e6;
-	font-size: 12px;
+	font-size: 13px;
 	display: block;
 }
 
@@ -514,8 +519,9 @@ h4 { font-size: 16px; }
 }
 
 .home #featured-post-widget-wrap h4 {
-	font-size: 14px;
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-size: 18px;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	font-weight: normal;
 	word-spacing: 3px;
 	padding: 3px 10px;
@@ -554,6 +560,7 @@ h4 { font-size: 16px; }
 	overflow: hidden;
 	font-weight: normal;
 	margin-top : 15px;
+	line-height: 22px;
 }
 
 .home .featured-post-item h3 a {
@@ -565,7 +572,7 @@ h4 { font-size: 16px; }
 
 .home .featured-post-item span a {
 	color: #5d5d5d;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -591,7 +598,7 @@ h4 { font-size: 16px; }
 .home .post.widget_sp_image h2 {
 	font-weight: normal;
 	line-height: 20px;
-	font-size: 18px;
+	font-size: 20px;
 	word-spacing : 4px;
 }
 
@@ -613,14 +620,15 @@ h4 { font-size: 16px; }
 }
 
 .home .post.widget_sp_image .widget_sp_image-description {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 17px;
 	padding: 0 15px;
 }
 
 .home .post.widget_sp_image .widget_sp_image-description a {
-	font-size: 13px;
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-size: 16px;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	padding: 3px 10px 1px;
 	color: #302e2f;
 	background: #FFF;
@@ -641,8 +649,9 @@ h4 { font-size: 16px; }
 }
 
 .home .above-home-image-widget span {
-	font-size: 14px;
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-size: 18px;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	padding: 5px 10px;
 	color: #302e2f;
 	background: #FFF;
@@ -668,13 +677,14 @@ h4 { font-size: 16px; }
 }
 
 .feature-block h4 {
-	font-size: 32px;
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-size: 36px;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	margin: 0;
 }
 
 .feature-block .feature-main-text {
-	font-size: 13px;
+	font-size: 14px;
 	margin: 7px 0 20px 0;
 	line-height : 18px;
 }
@@ -683,7 +693,7 @@ h4 { font-size: 16px; }
 .feature-block .feature-sub-text {
 	border-bottom: 1px solid #f45943;
 	padding: 0 0 6px 0;
-	font-size: 13px;
+	font-size: 14px;
 	line-height : 16px;
 }
 
@@ -704,7 +714,7 @@ h4 { font-size: 16px; }
 	background: white;
 	display: inline-block;
 	padding: 3px 15px 0px 15px;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: normal;
 	margin: 0 0 0 10px;
 	color: #353334;
@@ -725,7 +735,7 @@ h4 { font-size: 16px; }
 }
 
 .news-post-item h3 {
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	margin: 3px 0 0 0;
 }
@@ -746,8 +756,9 @@ h4 { font-size: 16px; }
 }
 
 .news-post-date-wrap a {
-	font-size: 9px;
-	font-family: 'BebasRegular', Arial, sans-serif;
+	font-size: 11px;
+	font-family: 'jaf-bernina-sans-comp', Arial, sans-serif;
+	text-transform: uppercase;
 	margin: 0;
 	color: #F45943;
 	background: #FFF;
@@ -767,7 +778,8 @@ h4 { font-size: 16px; }
 	height: 56px;
 	margin: 0 0 5px 0;
 	text-align: center;
-	font-family : 'BebasRegular';
+	font-family : 'jaf-bernina-sans-comp';
+	text-transform: uppercase;
 }
 
 .news-post-date span {
@@ -776,7 +788,7 @@ h4 { font-size: 16px; }
 }
 
 .news-post-excerpt a {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
 	color: #5d5d5d;
