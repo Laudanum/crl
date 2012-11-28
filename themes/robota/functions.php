@@ -111,20 +111,47 @@ function the_person_meta() {
 	}
 }
 
+function the_publication_meta(){
+	if ( $keys = get_post_custom_keys() ) {
+		foreach ( (array) $keys as $key ) {
+			$keyt = trim($key);
+			if ( is_protected_meta( $keyt, 'post' ) )
+				continue;
+			$values = array_map('trim', get_post_custom_values($key));
+			$value = implode($values,', ');
+			
+			// Links should be made into to anchors and listed //
+			if( $keyt == 'Links' ){
+				$links = explode(',', $value );
+				$value = '<ul>';
+				foreach( $links as $lnk ){
+					$value .= '<li><a href="' . $lnk . '">' . $lnk . '</a></li>';
+				}
+				$value .= '</ul>';
+			}
+			echo apply_filters('the_meta_key', "<li><span class='key'>$key:</span> $value</li>\n", $key, $value);
+		}
+	}
+}
+
 // Xreferences Shortcode - gets the publication posts //
 function xref_shortcode_publications(){
 	$postId = get_the_ID();
 	$posts = explode(",", is_xref_get_list( $postId ));
 	
-	$str = '<ul class="xref-publications">';
-	foreach( $posts as $post ){
-		$thePost = get_post( $post );
-		$str .= '<li><a href="'. get_permalink( $post ) . '">
-			' . $thePost->post_title . '
-		</a></li>';
+	if( is_array($posts)){
+		$str = '<ul class="xref-publications">';
+
+		foreach( $posts as $post ){
+			$thePost = get_post( $post );
+			$str .= '<li><a href="'. get_permalink( $post ) . '">
+				' . $thePost->post_title . '
+			</a></li>';
+		}
+		$str .= '</ul>';
+		return $str;
 	}
-	$str .= '</ul>';
-	return $str;	
+	return $str;
 }
 
 add_shortcode( 'xref_publications', 'xref_shortcode_publications' );

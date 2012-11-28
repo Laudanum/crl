@@ -1,8 +1,3 @@
-<?php if( in_category('publications')){
-	include('single-publication.php');
-	return;
-} ?>
-
 <?php get_header(); ?>
 
 	<div id="container">
@@ -22,10 +17,13 @@
 						<header class="entry-header">
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
 							<aside class="entry-meta">
-								<?php the_time( get_option( 'date_format' ) ); ?> | 
-								<?php _e( 'Filed under', 'esplanade' ); ?>: <?php the_category( ', ' ) ?>
-								<?php the_tags( __( 'and tagged with: ', 'esplanade' ), ', ', '' ); ?>
-								<?php edit_post_link( __( 'Edit', 'esplanade' ), ' | ', '' ); ?>		
+								<ul class="publication-meta-list">
+									<li><span class="key">Publish Date:</span> <?php the_time( get_option( 'date_format' ) ); ?></li>
+									<li><span class="key">Categories: </span><?php the_category( ', ' )?></li>
+									<li><span class="key">Authors: </span><?php echo xref_shortcode_publications() ?></li>
+									<?php the_publication_meta() ?>
+								</ul>
+								<?php edit_post_link( __( 'Edit', 'esplanade' ), '', '' ); ?>		
 							</aside><!-- .entry-meta -->
 						</header><!-- .entry-header -->
 						<div class="entry-content">
