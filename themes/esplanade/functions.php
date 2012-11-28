@@ -2114,7 +2114,7 @@ function people_init() {
 		'people',
 		'page',
 		array(
-			'label' => __( 'People' ),
+			'label' => __( 'People Category' ),
 			'sort' => true,
 			'args' => array( 'orderby' => 'term_order' ),
 			'rewrite' => array( 'slug' => 'person' )
