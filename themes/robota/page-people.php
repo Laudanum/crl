@@ -36,13 +36,16 @@ get_header();
 				} else {
 					$position = "";
 				}
+				$meta = get_post_meta( get_the_ID() );
+				$thePosition = $meta['Position'][0];
 			
 			?>
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-					<div class="entry portfolio-entry <?php echo $position; ?>">
+					<div class="entry portfolio-entry <?php echo $position; ?> entry-person">
 						<header class="entry-header">
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
                             	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+								<span class="entry-position"><?php echo $thePosition ?></span>
                             </<?php esplanade_title_tag( 'post' ); ?>>
 						</header><!-- .entry-header -->
 						<div class="entry-content">

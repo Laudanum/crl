@@ -381,6 +381,20 @@ h4 { font-size: 24px; }
 	height: 118px;
 
 }
+
+.entry-person.portfolio-entry {
+	height : 180px;
+}
+
+.entry-person.portfolio-entry .entry-position {
+	display : block;
+	font-style : italic;
+}
+
+.entry-person.portfolio-entry .entry-header {
+	height : 55px;
+}
+
 /* Publications Page */
 .publication-meta-list .post-meta-key {
 	width : 80px;
