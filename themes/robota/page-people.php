@@ -42,15 +42,15 @@ get_header();
 			?>
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<div class="entry portfolio-entry <?php echo $position; ?> entry-person">
+						<div class="entry-content">
+							<?php the_post_thumbnail( 'portfolio-thumb' ); ?>
+						</div><!-- .entry-content -->
 						<header class="entry-header">
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
                             	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 								<span class="entry-position"><?php echo $thePosition ?></span>
                             </<?php esplanade_title_tag( 'post' ); ?>>
 						</header><!-- .entry-header -->
-						<div class="entry-content">
-							<?php the_post_thumbnail( 'portfolio-thumb' ); ?>
-						</div><!-- .entry-content -->
 					</div><!-- .entry -->
 				</article><!-- .post -->
 			<?php 
