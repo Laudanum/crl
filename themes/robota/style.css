@@ -388,7 +388,7 @@ h4 { font-size: 24px; }
 
 .entry-person.portfolio-entry .entry-position {
 	display : block;
-	font-style : italic;
+	color : #999;
 }
 
 .entry-person.portfolio-entry .entry-header {
