@@ -16,17 +16,20 @@
 						<?php esplanade_post_nav(); ?>
 						<header class="entry-header">
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
-							<aside class="entry-meta">
-								<ul class="publication-meta-list">
-									<li><span class="key">Publish Date:</span> <?php the_time( get_option( 'date_format' ) ); ?></li>
-									<li><span class="key">Categories: </span><?php the_category( ', ' )?></li>
-									<li><span class="key">Authors: </span><?php echo xref_shortcode_publications() ?></li>
+							<aside>
+								<ul class="publication-meta-list post-meta">
+									<li><span class="post-meta-key">Publish Date:</span> <?php the_time( get_option( 'date_format' ) ); ?></li>
+									<li><span class="post-meta-key">Categories: </span><?php the_category( ', ' )?></li>
+									<?php if( has_attachments()) : ?>
+										<li><span class="post-meta-key">Downloads: </span><?php the_publication_attachments(); ?></li>
+									<?php endif; ?>
+									<li><span class="post-meta-key">Authors: </span><?php echo xref_shortcode_publications() ?></li>
 									<?php the_publication_meta() ?>
 								</ul>
 								<?php edit_post_link( __( 'Edit', 'esplanade' ), '', '' ); ?>		
 							</aside><!-- .entry-meta -->
 						</header><!-- .entry-header -->
-						<div class="entry-content">
+						<div class="entry-content-wrapper">
 							<?php if( has_post_format( 'audio' ) ) : ?>
 								<p><?php esplanade_post_audio(); ?></p>
 							<?php elseif( has_post_format( 'video' ) ) : ?>
@@ -38,9 +41,6 @@
 						</div><!-- .entry-content -->
 						<footer class="entry-utility">
 							<?php wp_link_pages( array( 'before' => '<p class="post-pagination">' . __( 'Pages:', 'esplanade' ), 'after' => '</p>' ) ); ?>
-							<?php esplanade_social_bookmarks(); ?>
-							<?php esplanade_post_author(); ?>
-							<?php esplanade_post_nav(); ?>
 						</footer><!-- .entry-utility -->
 					</div><!-- .entry -->
 					<?php comments_template(); ?>

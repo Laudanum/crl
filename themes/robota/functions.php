@@ -123,15 +123,51 @@ function the_publication_meta(){
 			// Links should be made into to anchors and listed //
 			if( $keyt == 'Links' ){
 				$links = explode(',', $value );
-				$value = '<ul>';
+				$value = '<ul class="post-meta publication-meta-list">';
 				foreach( $links as $lnk ){
-					$value .= '<li><a href="' . $lnk . '">' . $lnk . '</a></li>';
+					$value .= '<li class=""><a href="' . $lnk . '">' . $lnk . '</a></li>';
 				}
 				$value .= '</ul>';
 			}
-			echo apply_filters('the_meta_key', "<li><span class='key'>$key:</span> $value</li>\n", $key, $value);
+			echo apply_filters('the_meta_key', "<li class=\"\"><span class='post-meta-key'>$key:</span> $value</li>\n", $key, $value);
 		}
 	}
+}
+
+function has_attachments(){
+	$args = array(
+		'post_type' => 'attachment',
+		'numberposts' => null,
+		'post_status' => null,
+		'post_parent' => get_the_ID()
+	); 
+	
+	$attachments = get_posts($args);
+	
+	return count( $attachments ) > 0;
+}
+
+function the_publication_attachments(){
+	
+	$args = array(
+		'post_type' => 'attachment',
+		'numberposts' => null,
+		'post_status' => null,
+		'post_parent' => get_the_ID()
+	); 
+	
+	$attachments = get_posts($args);
+	
+	if ($attachments) {
+		$value = '<ul class="post-meta publication-meta-list">';
+		foreach ($attachments as $attachment) {
+			$value .= '<li><a href="'.$attachment->guid.'" target="_blank">' . apply_filters('the_title', $attachment->post_title) . '</a></li>';
+		}
+		$value .= '</ul>';
+	}
+	
+	echo $value;
+	
 }
 
 // Xreferences Shortcode - gets the publication posts //

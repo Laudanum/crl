@@ -379,8 +379,28 @@ h4 { font-size: 24px; }
 	width: 220px;
 	max-width: 220px;
 	height: 118px;
+
+}
+/* Publications Page */
+.publication-meta-list .post-meta-key {
+	width : 140px;
 }
 
+.publication-meta-list ul {
+	list-style-type: none;
+	margin : 10px 0;
+}
+
+.page-template-page-publications-php article .entry-title,
+body.category-publications .entry-title {
+	font-size : 16px;
+	font-weight : normal;
+	margin-bottom : 10px;
+}
+
+.category-publications .entry-meta {
+	display : none;
+}
 
 /* Person Page */
 
