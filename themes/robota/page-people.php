@@ -49,7 +49,7 @@ get_header();
 			wp_reset_query(); 
 			global $post;
 			foreach( $org as $name => $posts ) :
-				echo '<h3 class="clear">' . $name . '</h3>';
+				echo '<div class="clear"></div><h3>' . $name . '</h3>';
 				foreach( $posts as $post ) :
 				setup_postdata( $post );
 				?>
