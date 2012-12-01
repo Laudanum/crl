@@ -26,6 +26,7 @@ get_header();
 				'post_parent'	=> '418',
 				'posts_per_page'=> -1
 			);
+			
 			$projects_query = new WP_Query ( $args );
 			$counter = 0;
 			
@@ -38,24 +39,36 @@ get_header();
 				}
 				$meta = get_post_meta( get_the_ID() );
 				$thePosition = $meta['Position'][0];
-			
-			?>
-				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-					<div class="entry portfolio-entry <?php echo $position; ?> entry-person">
-						<div class="entry-content">
-							<?php the_post_thumbnail( 'portfolio-thumb' ); ?>
-						</div><!-- .entry-content -->
-						<header class="entry-header">
-							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
-                            	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-								<span class="entry-position"><?php echo $thePosition ?></span>
-                            </<?php esplanade_title_tag( 'post' ); ?>>
-						</header><!-- .entry-header -->
-					</div><!-- .entry -->
-				</article><!-- .post -->
-			<?php 
+				
+				$terms = get_the_terms( get_the_ID(), 'people' );
+				if( is_array($terms)){
+					$term = current( $terms );
+					$org[ $term->name ][] = get_post( get_the_ID());
+				}
 			endwhile;
 			wp_reset_query(); 
+			global $post;
+			foreach( $org as $name => $posts ) :
+				echo '<h3>' . $name . '</h3>';
+				foreach( $posts as $post ) :
+				setup_postdata( $post );
+				?>
+					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+						<div class="entry portfolio-entry <?php echo $position; ?> entry-person">
+							<div class="entry-content">
+								<?php the_post_thumbnail( 'portfolio-thumb' ); ?>
+							</div><!-- .entry-content -->
+							<header class="entry-header">
+								<<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+									<span class="entry-position"><?php echo $thePosition ?></span>
+								</<?php esplanade_title_tag( 'post' ); ?>>
+							</header><!-- .entry-header -->
+						</div><!-- .entry -->
+					</article><!-- .post -->
+				<?php 
+				endforeach;
+			endforeach;
 			?>
 		</section><!-- #content -->
         
