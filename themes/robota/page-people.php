@@ -43,7 +43,10 @@ get_header();
 				$terms = get_the_terms( get_the_ID(), 'people' );
 				if( is_array($terms)){
 					$term = current( $terms );
-					$org[ $term->name ][] = get_post( get_the_ID());
+					$post = get_post( get_the_ID());
+					$post->position = $position;
+					$org[ $term->name ][] = $post;
+					
 				}
 			endwhile;
 			wp_reset_query(); 
@@ -54,7 +57,7 @@ get_header();
 				setup_postdata( $post );
 				?>
 					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<div class="entry portfolio-entry <?php echo $position; ?> entry-person">
+						<div class="entry portfolio-entry <?php echo $post->position; ?> entry-person">
 							<div class="entry-content">
 								<?php the_post_thumbnail( 'portfolio-thumb' ); ?>
 							</div><!-- .entry-content -->
