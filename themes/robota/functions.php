@@ -187,9 +187,7 @@ function xref_shortcode_publications( $list = true ){
 					$str .= ', ';
 				}
 				$thePost = get_post( $post );
-				$str .= '<a href="'. get_permalink( $post ) . '">
-					' . $thePost->post_title . '
-				</a>';
+				$str .= '<a href="'. get_permalink( $post ) . '">' . $thePost->post_title . '</a>';
 				$i++;
 			}
 			return $str;
