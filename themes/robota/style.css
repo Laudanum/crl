@@ -436,6 +436,11 @@ h4 { font-size: 24px; }
 
 .publications-page article h1.entry-title {
 	font-size : 16px;
+	margin-bottom : 0;
+}
+
+.publications-page article {
+	padding : 4.28% 0;
 }
 
 
