@@ -41,6 +41,7 @@ get_header();
 				$thePosition = $meta['Position'][0];
 				
 				$terms = get_the_terms( get_the_ID(), 'people' );
+				
 				if( is_array($terms)){
 					$term = current( $terms );
 					$post = get_post( get_the_ID());
