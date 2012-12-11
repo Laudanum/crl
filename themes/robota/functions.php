@@ -111,10 +111,13 @@ function the_person_meta() {
 	}
 }
 
-function the_publication_meta(){
+function the_publication_meta( $specific = null ){
 	if ( $keys = get_post_custom_keys() ) {
 		foreach ( (array) $keys as $key ) {
 			$keyt = trim($key);
+			if( $specific && $specific != $keyt ){
+				continue;
+			}
 			if ( is_protected_meta( $keyt, 'post' ) )
 				continue;
 			$values = array_map('trim', get_post_custom_values($key));
@@ -129,7 +132,7 @@ function the_publication_meta(){
 				}
 				$value .= '</ul>';
 			}
-			echo apply_filters('the_meta_key', "<li class=\"\"><span class='post-meta-key'>$key:</span> $value</li>\n", $key, $value);
+			echo apply_filters('the_meta_key', "<li class=\"\">$value</li>\n", $key, $value);
 		}
 	}
 }

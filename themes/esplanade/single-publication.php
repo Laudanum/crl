@@ -18,13 +18,9 @@
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
 							<aside>
 								<ul class="publication-meta-list post-meta">
-									<li><span class="post-meta-key">Publish Date:</span> <?php the_time( get_option( 'date_format' ) ); ?></li>
-									<li><span class="post-meta-key">Categories: </span><?php the_category( ', ' )?></li>
-									<?php if( has_attachments()) : ?>
-										<li><span class="post-meta-key">Downloads: </span><?php the_publication_attachments(); ?></li>
-									<?php endif; ?>
-									<li><span class="post-meta-key">Authors: </span><?php echo xref_shortcode_publications() ?></li>
-									<?php the_publication_meta() ?>
+									<li><?php echo xref_shortcode_publications() ?></li>
+									<li><?php the_time( get_option( 'date_format' ) ); ?></li>
+									<?php the_publication_meta('Platform') ?>
 								</ul>
 								<?php edit_post_link( __( 'Edit', 'esplanade' ), '', '' ); ?>		
 							</aside><!-- .entry-meta -->
@@ -38,6 +34,13 @@
 							<?php the_content(); ?>
 							<p><?php the_field('name'); ?></p>
 							<div class="clear"></div>
+							<ul class="publication-meta-list post-meta">
+								<li>Categories: <?php the_category( ', ' )?></li>
+								<?php if( has_attachments()) : ?>
+									<li>Downloads: <?php the_publication_attachments(); ?></li>
+								<?php endif; ?>
+								<?php the_publication_meta('Links') ?>
+							</ul>
 						</div><!-- .entry-content -->
 						<footer class="entry-utility">
 							<?php wp_link_pages( array( 'before' => '<p class="post-pagination">' . __( 'Pages:', 'esplanade' ), 'after' => '</p>' ) ); ?>
