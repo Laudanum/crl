@@ -12,7 +12,7 @@ get_header();
 		<section id="content" class="publications-page">
         
             <header class="entry-header">
-                <<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
+                <<?php esplanade_title_tag( 'post' ); ?> class="entry-title entry-title-publications">
 					<?php the_title(); ?>
                 </<?php esplanade_title_tag( 'post' ); ?>>
             </header>
