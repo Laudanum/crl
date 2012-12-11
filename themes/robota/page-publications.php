@@ -9,7 +9,7 @@ get_header();
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 			<div class="content-sidebar-wrap">
 		<?php endif; ?>
-		<section id="content">
+		<section id="content" class="publications-page">
         
             <header class="entry-header">
                 <<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
