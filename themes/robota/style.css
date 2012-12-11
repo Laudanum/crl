@@ -413,6 +413,17 @@ h4 { font-size: 24px; }
 	font-size : 26px;
 }
 
+.category .post .entry-title {
+	font-size : 16px;
+	font-weight : normal;
+	margin-bottom : 10px;
+}
+
+.single-format-standard .category-publications .entry-title {
+	font-size : 26px;
+}
+
+
 .category-publications .entry-meta {
 	display : none;
 }
