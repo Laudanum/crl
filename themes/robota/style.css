@@ -428,8 +428,8 @@ h4 { font-size: 24px; }
 	display : none;
 }
 
-.category .archive .post {
-	margin : 0 20px !important;
+.category.archive h1.entry-title-category {
+	margin : 0 20px;
 }
 
 

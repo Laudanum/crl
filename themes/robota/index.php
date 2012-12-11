@@ -18,7 +18,7 @@ get_header();
 				break;
 			}
 			echo '<header class="entry-header">
-				<h1 class="entry-title">'. $theCats . '</h1>
+				<h1 class="entry-title entry-title-category">'. $theCats . '</h1>
 			</header>';
 		}
 			if( have_posts() ) :
