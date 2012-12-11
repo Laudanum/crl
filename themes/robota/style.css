@@ -39,13 +39,17 @@ h2 { font-size: 26px; }
 h3 { font-size: 20px; }
 h4 { font-size: 24px; }
 
-.single .entry-title, .page .entry-title, .error404 .entry-title {
+.single .entry-title, 
+.page .entry-title, 
+.error404 .entry-title,
+.category .entry-title {
 	font-size: 26px;
 	font-weight:normal !important;
 	vertical-align: text-top;
 }
 
-.page .entry-title {
+.page .entry-title,
+.category .entry-title {
 	margin-bottom : 24px;
 }
 
@@ -419,10 +423,6 @@ h4 { font-size: 24px; }
 	display : none;
 }
 
-.category-publications .archive .post,
-.category-publications .entry-header h1 {
-	margin: 0 20px !important;
-}
 
 /* Person Page */
 
