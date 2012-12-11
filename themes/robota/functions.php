@@ -126,7 +126,7 @@ function the_publication_meta( $specific = null ){
 			// Links should be made into to anchors and listed //
 			if( $keyt == 'Links' ){
 				$links = explode(',', $value );
-				$value = '<ul class="post-meta publication-meta-list">';
+				$value = '<ul class="post-meta publication-meta-list"><li>Links:</li>';
 				foreach( $links as $lnk ){
 					$value .= '<li class=""><a href="' . $lnk . '">' . $lnk . '</a></li>';
 				}
@@ -174,9 +174,27 @@ function the_publication_attachments(){
 }
 
 // Xreferences Shortcode - gets the publication posts //
-function xref_shortcode_publications(){
+function xref_shortcode_publications( $list = true ){
 	$postId = get_the_ID();
 	$posts = explode(",", is_xref_get_list( $postId ));
+	
+	if( !$list ){
+		if( is_array($posts)){
+			$str = '';
+			$i = 0;
+			foreach( $posts as $post ){
+				if( $i > 0 ){
+					$str . ', ';
+				}
+				$thePost = get_post( $post );
+				$str .= '<a href="'. get_permalink( $post ) . '">
+					' . $thePost->post_title . '
+				</a>';
+				$i++;
+			}
+			return $str;
+		}
+	}
 	
 	if( is_array($posts)){
 		$str = '<ul class="xref-publications">';

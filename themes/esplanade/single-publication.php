@@ -35,7 +35,8 @@
 							<p><?php the_field('name'); ?></p>
 							<div class="clear"></div>
 							<ul class="publication-meta-list post-meta">
-								<li>Categories: <?php the_category( ', ' )?></li>
+								<li>Categories:</li>
+								<li><?php the_category( ', ' )?></li>
 								<?php if( has_attachments()) : ?>
 									<li>Downloads: <?php the_publication_attachments(); ?></li>
 								<?php endif; ?>
