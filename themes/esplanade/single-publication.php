@@ -38,7 +38,8 @@
 								<li>Categories:</li>
 								<li><?php the_category( ', ' )?></li>
 								<?php if( has_attachments()) : ?>
-									<li>Downloads: <?php the_publication_attachments(); ?></li>
+									<li>Downloads:</li>
+									<li><?php the_publication_attachments(); ?></li>
 								<?php endif; ?>
 								<?php the_publication_meta('Links') ?>
 							</ul>
