@@ -184,7 +184,7 @@ function xref_shortcode_publications( $list = true ){
 			$i = 0;
 			foreach( $posts as $post ){
 				if( $i > 0 ){
-					$str . ', ';
+					$str .= ', ';
 				}
 				$thePost = get_post( $post );
 				$str .= '<a href="'. get_permalink( $post ) . '">
