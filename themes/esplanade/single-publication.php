@@ -20,7 +20,7 @@
 								<ul class="publication-meta-list post-meta">
 									<li><?php echo xref_shortcode_publications( false ) ?></li>
 									<li><?php the_time( get_option( 'date_format' ) ); ?></li>
-									<?php the_publication_meta('Platform') ?>
+									<li><?php the_publication_meta('Platform') ?></li>
 								</ul>
 								<?php edit_post_link( __( 'Edit', 'esplanade' ), '', '' ); ?>		
 							</aside><!-- .entry-meta -->

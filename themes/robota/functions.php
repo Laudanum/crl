@@ -132,7 +132,7 @@ function the_publication_meta( $specific = null ){
 				}
 				$value .= '</ul>';
 			}
-			echo apply_filters('the_meta_key', "<li class=\"\">$value</li>\n", $key, $value);
+			echo apply_filters('the_meta_key', "<li>$value</li>\n", $key, $value);
 		}
 	}
 }
