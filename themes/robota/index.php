@@ -7,7 +7,20 @@ get_header();
 		endif;
 		
 		echo '<section id="content">';
-		echo stuff;
+		if( in_category('publications') ){
+			$cats = get_the_category();
+			$theCats = 'Publications';
+			foreach( $cats as $cat ){
+				if( $cat->slug == 'publications' ){
+					continue;
+				}
+				$theCats .= ': ' . $cat->name;
+				break;
+			}
+			echo '<header class="entry-header">
+				<h1 class="entry-title">'. $theCats . '</h1>
+			</header>';
+		}
 			if( have_posts() ) :
 				while( have_posts() ) : the_post();
 					get_template_part( 'content', get_post_format() );
