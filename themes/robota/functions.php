@@ -174,11 +174,11 @@ function the_publication_attachments(){
 }
 
 // Xreferences Shortcode - gets the publication posts //
-function xref_shortcode_publications( $list = true ){
+function xref_shortcode_publications( $list = '' ){
 	$postId = get_the_ID();
 	$posts = explode(",", is_xref_get_list( $postId ));
 	
-	if( !$list ){
+	if( $list == 'list' ){
 		if( is_array($posts)){
 			$str = '';
 			$i = 0;

@@ -18,7 +18,7 @@
 							<<?php esplanade_title_tag( 'post' ); ?> class="entry-title"><?php the_title(); ?></<?php esplanade_title_tag( 'post' ); ?>>
 							<aside>
 								<ul class="publication-meta-list post-meta">
-									<li><?php echo xref_shortcode_publications( false ) ?></li>
+									<li><?php echo xref_shortcode_publications( 'list' ) ?></li>
 									<li><?php the_time( get_option( 'date_format' ) ); ?></li>
 									<li><?php the_publication_meta('Platform') ?></li>
 								</ul>
