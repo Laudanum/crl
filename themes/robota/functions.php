@@ -126,7 +126,7 @@ function the_publication_meta( $specific = null ){
 			// Links should be made into to anchors and listed //
 			if( $keyt == 'Links' ){
 				$links = explode(',', $value );
-				$value = '<ul class="post-meta publication-meta-list"><li>Links:</li>';
+				$value = '<ul class="post-meta publication-meta-list">';
 				foreach( $links as $lnk ){
 					$value .= '<li class=""><a href="' . $lnk . '">' . $lnk . '</a></li>';
 				}
