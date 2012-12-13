@@ -9,7 +9,7 @@ Template Name: person page
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 			<div class="content-sidebar-wrap">
 		<?php endif; ?>
-		<section id="content">
+		<section id="content" class="fullwidth">
 			<?php if( have_posts() ) : the_post(); ?>
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<div class="entry">
