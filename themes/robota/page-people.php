@@ -75,7 +75,7 @@ get_header();
 			endforeach;
 			?>
 		</section><!-- #content -->
-        
+        <?php /*
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 				<?php get_sidebar( 'left' ); ?>
 			</div><!-- #content-sidebar-wrap -->
@@ -83,5 +83,8 @@ get_header();
 		<?php elseif( ( 'no-sidebars' != esplanade_get_option( 'layout' ) ) && ( 'full-width' != esplanade_get_option( 'layout' ) ) ) : ?>
 			<?php get_sidebar(); ?>
 		<?php endif; ?>
+		 * 
+		 */ ?>
+			
 	</div><!-- #container -->
 <?php get_footer(); ?>
