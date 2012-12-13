@@ -38,7 +38,7 @@ get_header();
 		</section><!-- #content -->
         
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
-				<?php get_sidebar( 'left' ); ?>
+				<?php /* get_sidebar( 'left' ); */ ?>
 			</div><!-- #content-sidebar-wrap -->
 			<?php get_sidebar( 'right' ); ?>
 		<?php elseif( ( 'no-sidebars' != esplanade_get_option( 'layout' ) ) && ( 'full-width' != esplanade_get_option( 'layout' ) ) ) : ?>
