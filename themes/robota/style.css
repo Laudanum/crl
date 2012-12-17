@@ -435,7 +435,7 @@ h4 { font-size: 24px; }
 .category.archive h1.entry-title-category,
 .publications-page article,
 .publications-page h1.entry-title-publications {
-	margin : 0 20px;
+	margin : 0;
 }
 
 .publications-page article h1.entry-title {
