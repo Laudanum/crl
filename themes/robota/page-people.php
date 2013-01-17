@@ -81,14 +81,16 @@ get_header();
 				<?php 
 					endforeach;
 				?>
-					<div class="clear"></div>
-					<article class="entry-description">
-						<?= $settings['description'] ?>
-					</article>
 			<?php
 				endforeach;
+				wp_reset_postdata(); 
 			?>
 		</section><!-- #content -->
+		<section>
+			<article class="entry-description">
+				<?php echo the_content(); ?>
+			</article>
+		</section>
         <?php /*
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 				<?php get_sidebar( 'left' ); ?>
