@@ -403,6 +403,11 @@ h4 { font-size: 24px; }
 	height : 55px;
 }
 
+.entry-person .entry-content {
+	height : 105px;
+	overflow: hidden;
+}
+
 /* Publications Page */
 .publication-meta-list .post-meta-key {
 	width : 80px;
