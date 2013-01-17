@@ -49,13 +49,13 @@ get_header();
 					
 					if( isset($org[ $term->name ])){
 						$org[ $term->name ]['posts'][] = $post;
+					} else {
+						$org[ $term->name ] = array(
+							'name' => $term->name,
+							'description' => $term->description,
+							'posts' => array( $post )
+						);
 					}
-					
-					$org[ $term->name ] = array(
-						'name' => $term->name,
-						'description' => $term->description,
-						'posts' => array( $post )
-					);
 				}
 			endwhile;
 			wp_reset_query(); 
