@@ -29,7 +29,7 @@ get_header();
 			
 			$projects_query = new WP_Query ( $args );
 			$counter = 0;
-			
+			$org = array();
 			while ( $projects_query->have_posts() ) : $projects_query->the_post();
 				$counter++;
 				if($counter % 3 == 0){
@@ -46,15 +46,20 @@ get_header();
 					$term = current( $terms );
 					$post = get_post( get_the_ID());
 					$post->position = $position;
-					$org[ $term->name ][] = $post;
-					
+					$y = count($org);
+					$org[$y] = array(
+						'name' => $term->name,
+						'description' => $term->description,
+						'posts' => array()
+					);
+					$org[$y]['posts'][] = $post;
 				}
 			endwhile;
 			wp_reset_query(); 
 			global $post;
-			foreach( $org as $name => $posts ) :
-				echo '<div class="clear"></div><h3>' . $name . '</h3>';
-				foreach( $posts as $post ) :
+			foreach( $org as $settings ) :
+				echo '<div class="clear"></div><h3>' . $settings['name'] . '</h3>';
+				foreach( $settings['posts'] as $post ) :
 				setup_postdata( $post );
 				?>
 					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -71,8 +76,14 @@ get_header();
 						</div><!-- .entry -->
 					</article><!-- .post -->
 				<?php 
+					endforeach;
+				?>
+					<div class="clear"></div>
+					<article class="entry-description">
+						<?= $settings['description'] ?>
+					</article>
+			<?php
 				endforeach;
-			endforeach;
 			?>
 		</section><!-- #content -->
         <?php /*
