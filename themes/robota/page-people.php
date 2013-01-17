@@ -46,13 +46,16 @@ get_header();
 					$term = current( $terms );
 					$post = get_post( get_the_ID());
 					$post->position = $position;
-					$y = count($org);
-					$org[$y] = array(
+					
+					if( isset($org[ $term->name ])){
+						$org[ $term->name ]['posts'][] = $post;
+					}
+					
+					$org[ $term->name ] = array(
 						'name' => $term->name,
 						'description' => $term->description,
-						'posts' => array()
+						'posts' => array( $post )
 					);
-					$org[$y]['posts'][] = $post;
 				}
 			endwhile;
 			wp_reset_query(); 
