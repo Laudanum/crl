@@ -48,10 +48,10 @@ get_header();
 					$post = get_post( get_the_ID());
 					$post->position = $position;
 					
-					if( isset($org[ $term->name ])){
-						$org[ $term->name ]['posts'][] = $post;
+					if( isset($org[ $term->slug ])){
+						$org[ $term->slug ]['posts'][] = $post;
 					} else {
-						$org[ $term->name ] = array(
+						$org[ $term->slug ] = array(
 							'name' => $term->name,
 							'description' => $term->description,
 							'posts' => array( $post )
@@ -61,6 +61,8 @@ get_header();
 			endwhile;
 			wp_reset_query(); 
 			global $post;
+			// sort categories alphabetically on their machine name
+			ksort($org);
 			foreach( $org as $settings ) :
 				echo '<div class="clear"></div><h3>' . $settings['name'] . '</h3>';
 				foreach( $settings['posts'] as $post ) :
