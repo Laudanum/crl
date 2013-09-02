@@ -3,6 +3,7 @@
 Template Name: Sidebar / Content / Sidebar
 */
 ?><?php get_header(); ?>
+<!-- template page sidebar content sidebar -->
 	<div id="container">
 		<div class="content-sidebar-wrap">
 			<section id="content">

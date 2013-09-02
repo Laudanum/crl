@@ -7,6 +7,7 @@ get_header();
 
 
 ?>
+<!-- template page people -->
 	<div id="container">
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 			<div class="content-sidebar-wrap">

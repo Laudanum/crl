@@ -1,3 +1,4 @@
+<!-- template content aside -->
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<?php if( has_post_thumbnail() ) : ?>
 		<?php $thumb = ( esplanade_is_teaser() ? 'teaser-thumb' : 'blog-thumb' ); ?>

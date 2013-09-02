@@ -5,6 +5,7 @@
 Template Name: person page
 */
  ?>
+<!-- template person -->
 	<div id="container">
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 			<div class="content-sidebar-wrap">

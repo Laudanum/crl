@@ -3,6 +3,8 @@
 Template Name: Sidebar / Content
 */
 ?><?php get_header(); ?>
+<!-- template page sidebar content -->
+
 	<div id="container">
 		<section id="content">
 			<?php if( have_posts() ) : the_post(); ?>

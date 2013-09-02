@@ -1,10 +1,10 @@
 <?php
 
 // Template Name: Publications Page
-
 get_header(); 
 
 ?>
+<!-- template page publications -->
 	<div id="container">
 		<?php if( 'sidebar-content-sidebar' == esplanade_get_option( 'layout' ) ) : ?>
 			<div class="content-sidebar-wrap">

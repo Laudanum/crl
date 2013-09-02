@@ -187,17 +187,25 @@ function xref_shortcode_publications( $attrs = array() ){
         'posts_per_page'    => -1,
         'category'          => $category,
         'post__in'          => $post_ids,
-        'orderby'           => 'post_date',
-        'order'             => 'DESC',
-        'post_status'       => 'publish',
+        'post_type'         => array ('post', 'page'),
         'suppress_filters'  => true );
     $posts = get_posts( $args );
-
-    if( $list == 'list' ){
+    
+    if( $attrs['type'] == 'list' ){
         if( is_array($posts)){
+            //return is_xref_get_list( $post_id );
             $str = '';
             $i = 0;
-            foreach( $posts as $post ){
+
+            foreach( $post_ids as $id ) {
+                $post = null;
+                foreach($posts as $item) {
+                    if ($id == $item->ID) {
+                        $post = $item;
+                        break;
+                    }
+                }
+                if ( ! $post ) continue;
                 if( $i > 0 ){
                     $str .= ', ';
                 }
@@ -211,10 +219,18 @@ function xref_shortcode_publications( $attrs = array() ){
     if( is_array($posts)){
         $str = '<ul class="xref-publications ' . $category . '">';
 
-        foreach( $posts as $post ){
-            $str .= '<li><a href="'. get_permalink( $post ) . '">
-                ' . $post->post_title . '
-            </a></li>';
+        foreach( $post_ids as $id ) {
+            $post = null;
+            foreach($posts as $item) {
+                if ($id == $item->ID) {
+                    $post = $item;
+                    break;
+                }
+            }
+            if ( ! $post ) continue;
+        $str .= '<li><a href="'. get_permalink( $post ) . '">
+            ' . $post->post_title . '
+        </a></li>';
         }
         $str .= '</ul>';
         return $str;
