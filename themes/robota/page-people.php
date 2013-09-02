@@ -25,7 +25,10 @@ get_header();
 			$args = 	array(
 				'post_type' 	=> 'page',
 				'post_parent'	=> '418',
-				'posts_per_page'=> -1
+				'posts_per_page'=> -1,
+			// sort pages on menu order
+				'orderby'		=> 'menu_order',
+				'order'		=> 'ASC',
 			);
 			
 			$projects_query = new WP_Query ( $args );
