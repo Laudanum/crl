@@ -318,11 +318,6 @@ h4 { font-size: 24px; }
 	margin: 10px 0;
 }
 
-.entry-content .wp-caption img {
-	width: 67%;
-	float: left;
-}
-
 .entry-content .wp-caption h3 {
 	font-size: 20px;
 	padding: 2px 5px 0 5px;
