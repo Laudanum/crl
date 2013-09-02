@@ -39,7 +39,7 @@ get_header();
 					$position = "";
 				}
 				$meta = get_post_meta( get_the_ID() );
-				$thePosition = $meta['Position'][0];
+				$thePosition = $meta['Position'][0] ? $meta['Position'][0] : '';
 				
 				$terms = get_the_terms( get_the_ID(), 'people' );
 				
@@ -65,6 +65,8 @@ get_header();
 				echo '<div class="clear"></div><h3>' . $settings['name'] . '</h3>';
 				foreach( $settings['posts'] as $post ) :
 				setup_postdata( $post );
+				$meta = get_post_meta( get_the_ID() );
+				$thePosition = $meta['Position'][0] ? $meta['Position'][0] : '';
 				?>
 					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 						<div class="entry portfolio-entry <?php echo $post->position; ?> entry-person">
@@ -74,7 +76,7 @@ get_header();
 							<header class="entry-header">
 								<<?php esplanade_title_tag( 'post' ); ?> class="entry-title">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-									<span class="entry-position"><?php echo $thePosition ?></span>
+									<!-- <span class="entry-position"><?php echo $thePosition ?></span> -->
 								</<?php esplanade_title_tag( 'post' ); ?>>
 							</header><!-- .entry-header -->
 						</div><!-- .entry -->
