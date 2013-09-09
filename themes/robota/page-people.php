@@ -67,6 +67,7 @@ get_header();
 			// sort categories alphabetically on their machine name
 			ksort($org);
 			foreach( $org as $settings ) :
+				$counter = 0;
 				echo '<div class="clear"></div><h3>' . $settings['name'] . '</h3>';
 				foreach( $settings['posts'] as $post ) :
 				setup_postdata( $post );
@@ -74,7 +75,7 @@ get_header();
 				$thePosition = $meta['Position'][0] ? $meta['Position'][0] : '';
 				?>
 					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<div class="entry portfolio-entry <?php echo $post->position; ?> entry-person">
+						<div class="entry portfolio-entry entry-<?php echo $counter; ?> <?php if($counter++ % 3 == 2): ?>last-entry<?php endif; ?> entry-person">
 							<div class="entry-content">
 								<?php the_post_thumbnail( 'portfolio-thumb' ); ?>
 							</div><!-- .entry-content -->
